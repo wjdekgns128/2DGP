@@ -31,3 +31,6 @@ class WaitForSeconds:
     def Satisfy(self):
         self.current = self.current + 0.016
         return self.current >= self.time
+
+
+#상속받아서 사용
