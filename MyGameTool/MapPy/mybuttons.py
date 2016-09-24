@@ -9,10 +9,15 @@ class mybuttons(object):
         self.startX = x
         self.startY = y
         self.mycolor = color1
+        self.hide = True
     def Draw(self):
+        if self.hide == False:
+            return
         self.image.drawRGB(self.startX,self.startY,self.mycolor)
 
     def Coll(self,x,y):
+        if self.hide == False:
+            return
         left,bottom,right,top = self.startX - (self.image.w/2) + 10,self.startY - (self.image.h/2) + 10,self.startX + (self.image.w/2) - 10,self.startY + (self.image.h/2) -10
         left1,bottom1,right1,top1 = x-5,y-5,x+5,y+5
         if left > right1:
@@ -24,3 +29,5 @@ class mybuttons(object):
         if bottom > top1:
             return False
         return True
+    def Hide(self,check):
+        self.hide = check

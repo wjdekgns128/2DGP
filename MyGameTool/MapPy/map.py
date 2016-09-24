@@ -3,6 +3,10 @@ from pico2d import *
 
 from MapPy.Tile.NoTile import *
 from MapPy.Tile.OneTile import *
+from MapPy.Tile.TwoTile import *
+from MapPy.Tile.TheerTile import *
+from MapPy.Tile.FourTile  import *
+from MapPy.Tile.FiveTile import *
 
 from mydefine import *
 class NowDrawCheck:
@@ -35,7 +39,9 @@ class map:
         self.js = json.loads(f.read())
         f.close()
     def Update(self):
-        pass
+        for y in range(0, self.yCount):
+            for x in range(0, self.xCount):
+                self.MapTiles[x][y].Update()
     def Draw(self):
         for y in range(0, self.yCount):
             for x in range(0, self.xCount):
@@ -93,9 +99,18 @@ class map:
     def NowToMakeTile(self,now):
         self.NowDraw.NowDrawTiles[2] = MYTILECOLORLIST[now]
         self.NowDraw.NowNumber = now
-
     def NewCreateTile(self,tempx,tempy):
-        if self.NowDraw.NowNumber == ONETILE:
-            self.MapTiles[tempx][tempy] = OneTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx,tempy)
+        if self.MapTiles[tempx][tempy].Type == self.NowDraw.NowNumber:
+            return;
         if self.NowDraw.NowNumber == NOTILE:
-            self.MapTiles[tempx][tempy] = NoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx,tempy)
+            self.MapTiles[tempx][tempy] = NoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+        elif self.NowDraw.NowNumber == ONETILE:
+            self.MapTiles[tempx][tempy] = OneTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx,tempy)
+        elif self.NowDraw.NowNumber == TWOTILE:
+            self.MapTiles[tempx][tempy] = TwoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+        elif self.NowDraw.NowNumber == THREETILE:
+            self.MapTiles[tempx][tempy] = TheerTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+        elif self.NowDraw.NowNumber == FOURTILE:
+            self.MapTiles[tempx][tempy] = FourTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+        elif self.NowDraw.NowNumber == FIVETILE:
+            self.MapTiles[tempx][tempy] = FiveTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)

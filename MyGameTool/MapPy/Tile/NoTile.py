@@ -1,6 +1,6 @@
-from sdl2.pixels import SDL_Color
 from MapPy.Tile.Tile import Tile
 from mydefine import *
+from mycoroutine import  *
 
 class NoTile(Tile):
     def __init__(self,n,x,y,xnumber,ynumber):
@@ -9,7 +9,8 @@ class NoTile(Tile):
         self.Type = NOTILE
 
     def Draw(self):
-        self.selectandnotile.drawRGB(self.startX,self.startY,self.color)
+        self.selectandnotile.drawRGB(self.startX, self.startY, self.color)
+
     def Update(self):
         pass
 

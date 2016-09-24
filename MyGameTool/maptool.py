@@ -22,7 +22,7 @@ def exit():
     pass
 
 def update(frame_time):
-    pass
+    Map.Update()
 
 
 def draw(frame_time):
@@ -30,9 +30,8 @@ def draw(frame_time):
     global check
     clear_canvas()
     Map.Draw()
-    if check == False:
-        for i in range(0,Buttons.__len__()):
-            Buttons[i].Draw()
+    for i in range(0,Buttons.__len__()):
+        Buttons[i].Draw()
     update_canvas()
 
 def handle_events(frame_time):
@@ -49,7 +48,8 @@ def handle_events(frame_time):
                 ctypes.windll.user32.MessageBoxW(0, "게임 플레이모드 (맵변경불가)", "!",0)
             else:
                 ctypes.windll.user32.MessageBoxW(0, "게임 제작모드 (플레이불가)", "!",0)
-
+            for i in range(0, Buttons.__len__()):
+                Buttons[i].Hide(not check)
         elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_RIGHT):
             if check == False:
                 Map.ChageMap((Map.nowtype+1)%3)
