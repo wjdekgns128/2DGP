@@ -11,9 +11,8 @@ class TwoTile(Tile):
         self.color = TWOTILECOLOR
         self.Type = TWOTILE
         self.StartCoroutine(self.InitTile(True))
-
     def InitTile(self, check):
-        for i in range(0, 18):
+        for i in range(0, 9):
             yield WaitForSeconds(0.002)
             self.SizeH += 1
             self.SizeW += 1
@@ -21,7 +20,7 @@ class TwoTile(Tile):
             self.StartCoroutine(self.ReturnInitTile())
 
     def ReturnInitTile(self):
-        for i in range(0, 18):
+        for i in range(0,9):
             yield WaitForSeconds(0.001)
             self.SizeH -= 1
             self.SizeW -= 1

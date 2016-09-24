@@ -3,6 +3,8 @@ import game_framework
 from MapPy.mybuttons import mybuttons
 from MapPy.map import map
 from mydefine import *
+from MapPy.filesave import *
+
 check = False
 Buttons = []
 name = "MapTool"
@@ -15,6 +17,7 @@ def enter():
             Buttons.append(mybuttons('res/8x10_click.png', 100 + (i * 70), 760, MYTILECOLORLIST[i]))
         else:
             Buttons.append(mybuttons('res/8x10.png', 100 +( i * 70), 760, MYTILECOLORLIST[i]))
+    Buttons.append(mybuttons('res/loadimage.png',560,45))
     Map = map(MAPTYPE1)
 def exit():
     # fill here
@@ -56,9 +59,18 @@ def handle_events(frame_time):
                 Map.ChageMap((Map.nowtype+1)%3)
         elif (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
             for i in range(0, Buttons.__len__()):
-                if Buttons[i].Coll(event.x,800-event.y) == True:
-                    Map.NowToMakeTile(i)
-                    break
+                if Buttons[i].Coll(event.x, 800 - event.y) == True:
+                    if i == Buttons.__len__()-1:
+                        check1, maptype, count, clear, mylist = fileload().loadfile()
+                        if check1 == True:
+                            Map.ChageMap(maptype)
+                            Map.LoadSetting(clear,mylist)
+                            Map.ReSetting()
+
+                        break;
+                    else:
+                        Map.NowToMakeTile(i)
+                        break
         if check == False:
             Map.MouseMake(event)
         else:

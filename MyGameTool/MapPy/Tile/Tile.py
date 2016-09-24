@@ -17,8 +17,6 @@ class Tile(Coroutine):
         self.ynumber = ynumber
         self.SizeW = self.imagetile.w
         self.SizeH = self.imagetile.h
-
-
     def Draw(self):
         pass
     def Update(self):

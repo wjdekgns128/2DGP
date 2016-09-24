@@ -1,3 +1,4 @@
+
 from pico2d import *
 from MapPy.Tile.NoTile import *
 from MapPy.Tile.OneTile import *
@@ -6,11 +7,12 @@ from MapPy.Tile.TheerTile import *
 from MapPy.Tile.FourTile  import *
 from MapPy.Tile.FiveTile import *
 from mycoroutine import  *
-
 from mydefine import *
+from MapPy.filesave import *
 # 드로우 되는중인지,체크
 class NowDrawCheck:
     def __init__(self,xSize,ySize):
+
         self.x = 0
         self.y = 0
         self.xSize = xSize
@@ -33,6 +35,7 @@ class GameUI:
         self.Number = 1
         self.ClearCount = 10
         self.Playing = False
+
     def ClickClearColor(self):
             self.Number += 1
             self.Number %= MYTILECOLORLIST.__len__()
@@ -73,13 +76,14 @@ class ClickTile:
 class map(Coroutine): #
     def __init__(self,n):
         super(map, self).__init__()
-
+        self.ClearCount = 0
         self.name= ["type1","type2","type3"]
         self.TempMapTiles = []
         self.MapTiles = None
         self.UI = GameUI()
         self.TileCick = ClickTile()
         self.LoadJson()
+        self.savefile = filesave()
         self.ChageMap(n)
 
     def LoadJson(self):
@@ -100,10 +104,17 @@ class map(Coroutine): #
             self.TileCick.Draw()
         self.UI.Draw()
         self.NowDraw.Draw()
+    def LoadSetting(self,clear,mylist):
+        self.UI.Number = clear
+        for y in range(0, self.yCount):
+            for x in range(0, self.xCount):
+                self.NewCreateTile(x, y, mylist.pop())
     def ReSetting(self):
+        self.ClearCount = 0
         self.NowDraw = NowDrawCheck(self.xSize, self.ySize)
         self.DrawIng = False
         self.UI.ClearCount = 0
+        self.savefile.filesaveing = False
         self.TileCick.Setting(self.xSize,self.ySize)
         if self.UI.Playing == False:
             self.TempMapTiles.clear()
@@ -208,22 +219,35 @@ class map(Coroutine): #
         elif number == FIVETILE:
             self.MapTiles[tempx][tempy] = FiveTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
     def MoveColl(self,DownTile,UpTile,x,y):
-        if UpTile.Type == NOTILE or DownTile.Type == NOTILE:
+        if UpTile.Type == NOTILE or DownTile.Type == NOTILE or UpTile.Type == DownTile.Type:
             return
         else:
             self.UI.ClearCount += 1
-            self.StartCoroutine(self.StartColl(DownTile,x,y,UpTile.Type))
+            self.StartCoroutine(self.StartColl(DownTile,x,y,UpTile.Type,False))
 
-    def StartColl(self,PivTile,x,y,chagecolor): # 누른타일 # 바껴야할 타일 # 바껴야할타일x,y #바껴야할타일의 처음 색상
+    def StartColl(self,PivTile,x,y,chagecolor,clear): # 누른타일 # 바껴야할 타일 # 바껴야할타일x,y #바껴야할타일의 처음 색상
 
         if PivTile.Type != self.MapTiles[x][y].Type and chagecolor == self.MapTiles[x][y].Type and self.MapTiles[x][y].Type != NOTILE:
             self.NewCreateTile(x,y,PivTile.Type)
             yield WaitForSeconds(0.035)
             if x > 0:
-                self.StartCoroutine(self.StartColl(PivTile,x-1,y,chagecolor))
+                self.StartCoroutine(self.StartColl(PivTile,x-1,y,chagecolor,clear))
             if x < self.xCount:
-                self.StartCoroutine(self.StartColl(PivTile,x+1,y,chagecolor))
+                self.StartCoroutine(self.StartColl(PivTile,x+1,y,chagecolor,clear))
             if y > 0:
-                self.StartCoroutine(self.StartColl(PivTile,x,y-1,chagecolor))
+                self.StartCoroutine(self.StartColl(PivTile,x,y-1,chagecolor,clear))
             if y < self.yCount:
-                self.StartCoroutine(self.StartColl(PivTile,x,y+1,chagecolor))
+                self.StartCoroutine(self.StartColl(PivTile,x,y+1,chagecolor,clear))
+            if clear == False:
+               yield  WaitForSeconds(1)
+               if self.ClearCheck() == True:
+                   self.savefile.Save(self.nowtype,self.UI.ClearCount,self.UI.Number,self.TempMapTiles,self.xCount,self.yCount)
+               clear = True
+
+    def ClearCheck(self):
+        for y in range(0, self.yCount):
+            for x in range(0, self.xCount):
+                if self.UI.Number != self.MapTiles[x][y].Type and self.MapTiles[x][y].Type != NOTILE:
+                    return False
+        return True
+
