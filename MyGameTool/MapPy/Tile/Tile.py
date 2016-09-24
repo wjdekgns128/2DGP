@@ -1,22 +1,29 @@
 from pico2d import *
-from mydefine import *
-class Tile:
-    def __init__(self,n,x,y):
+class Tile(object):
+    def __init__(self,n,x,y,xnumber,ynumber):
+        imagelist = ["res/6x8.png", "res/8x10.png", "res/10x12.png"]
+        imagelist1 = ["res/6x8_click.png", "res/8x10_click.png", "res/10x12_click.png"]
         self.imagetile = None
-        if n == MAPTYPE1:
-            self.imagetile = load_image("res/6x8.png")
-        elif n == MAPTYPE2:
-            self.imagetile = load_image("res/8x10.png")
-        elif n == MAPTYPE3:
-            self.imagetile = load_image("res/10x12.png")
-        else:
-            print("범위나감" )
-
+        self.selectandnotile = None
+        self.imagetile = load_image(imagelist[n])
+        self.selectandnotile= load_image(imagelist1[n])
         self.startX = x
         self.startY = y
-        self.color =  SDL_Color(255,255,255)
-
+        self.xnumber = xnumber
+        self.ynumber = ynumber
     def Draw(self):
-        self.imagetile.drawRGB(self.startX,self.startY,self.color)
+        pass
     def Update(self):
         pass
+    def Coll(self,x,y):
+        left,bottom,right,top = self.startX - (self.imagetile.w/2) + 10,self.startY - (self.imagetile.h/2) + 10,self.startX + (self.imagetile.w/2) - 10,self.startY + (self.imagetile.h/2) -10
+        left1,bottom1,right1,top1 = x-5,y-5,x+5,y+5
+        if left > right1:
+            return False
+        if right < left1:
+            return False
+        if top < bottom1:
+            return False
+        if bottom > top1:
+            return False
+        return True
