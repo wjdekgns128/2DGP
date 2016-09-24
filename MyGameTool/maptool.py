@@ -12,9 +12,9 @@ def enter():
     open_canvas(600,800,sync = True)
     for i in range(0,end):
         if i == 0:
-            Buttons.append(mybuttons('res/8x10_click.png', 130 + (i * 70), 760, MYTILECOLORLIST[i]))
+            Buttons.append(mybuttons('res/8x10_click.png', 100 + (i * 70), 760, MYTILECOLORLIST[i]))
         else:
-            Buttons.append(mybuttons('res/8x10.png', 130 +( i * 70), 760, MYTILECOLORLIST[i]))
+            Buttons.append(mybuttons('res/8x10.png', 100 +( i * 70), 760, MYTILECOLORLIST[i]))
     Map = map(MAPTYPE1)
 def exit():
     # fill here
@@ -50,6 +50,7 @@ def handle_events(frame_time):
                 ctypes.windll.user32.MessageBoxW(0, "게임 제작모드 (플레이불가)", "!",0)
             for i in range(0, Buttons.__len__()):
                 Buttons[i].Hide(not check)
+            Map.ReSetting()
         elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_RIGHT):
             if check == False:
                 Map.ChageMap((Map.nowtype+1)%3)
