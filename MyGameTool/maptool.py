@@ -21,6 +21,8 @@ def enter():
     Map = map(MAPTYPE1)
 def exit():
     # fill here
+    global Map
+    del Map
     close_canvas()
     pass
 
