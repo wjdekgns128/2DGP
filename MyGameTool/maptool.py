@@ -17,7 +17,7 @@ def enter():
             Buttons.append(mybuttons('res/8x10_click.png', 100 + (i * 70), 760, MYTILECOLORLIST[i]))
         else:
             Buttons.append(mybuttons('res/8x10.png', 100 +( i * 70), 760, MYTILECOLORLIST[i]))
-    Buttons.append(mybuttons('res/loadimage.png',560,45))
+    Buttons.append(mybuttons('res/loadimage.png',520,45))
     Map = map(MAPTYPE1)
 def exit():
     # fill here
