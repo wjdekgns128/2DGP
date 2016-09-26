@@ -6,26 +6,22 @@ from mydefine import *
 
 
 def enter():
-    global  FadeinOut
     global  DrawMap
     DrawMap = Map()
-    FadeinOut = FadeInFadeOut()
+    DrawMap.MapSetting(0)
 
 def exit():
-    global FadeinOut
     global DrawMap
     del (DrawMap)
-    del (FadeinOut)
 def update(frame_time):
-    FadeinOut.Update()
-
-def draw(frame_time):
-    global FadeinOut
     global DrawMap
 
+    DrawMap.Update()
+def draw(frame_time):
+    global DrawMap
     # fill here
     clear_canvas()
-    FadeinOut.Draw()
+    DrawMap.Draw()
     update_canvas()
 
 def handle_events(frame_time):

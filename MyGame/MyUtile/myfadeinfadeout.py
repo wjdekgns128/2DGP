@@ -19,7 +19,7 @@ class FadeObject(Coroutine):
             self.drawimage.opacify(1 - (i*0.1))
             self.angle += 0.15
 
-            yield WaitForSeconds(0.025)
+            yield WaitForSeconds(0.035)
 
     def Update(self):
         self.RunCoroutine()
@@ -35,7 +35,7 @@ class FadeInFadeOut(Coroutine):
         if(self.FadeTile[x][y].PlayIng == False):
             self.FadeTile[x][y].ChageCheck()
             self.FadeTile[x][y].PlayIng = True
-            yield WaitForSeconds(0.046)
+            yield WaitForSeconds(0.052)
             if(x < 6):
                 self.StartCoroutine(self.PlayObject(x+1,y))
             if (x > 0):
