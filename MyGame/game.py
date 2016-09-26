@@ -1,21 +1,28 @@
 from pico2d import *
 import game_framework
+from Map.Map import *
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 
 
 def enter():
     global  FadeinOut
+    global  DrawMap
+    DrawMap = Map()
     FadeinOut = FadeInFadeOut()
 
 def exit():
     global FadeinOut
+    global DrawMap
+    del (DrawMap)
     del (FadeinOut)
 def update(frame_time):
     FadeinOut.Update()
 
 def draw(frame_time):
     global FadeinOut
+    global DrawMap
+
     # fill here
     clear_canvas()
     FadeinOut.Draw()

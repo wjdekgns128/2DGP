@@ -11,13 +11,14 @@ name = "MapTool"
 def enter():
     global Map
     end = MYTILECOLORLIST.__len__()
-    open_canvas(600,800,sync = True)
+
+    open_canvas(600,700,sync = True)
     for i in range(0,end):
         if i == 0:
-            Buttons.append(mybuttons('res/8x10_click.png', 100 + (i * 70), 760, MYTILECOLORLIST[i]))
+            Buttons.append(mybuttons('res/8x10_click.png', 40 + (i * 70), 660, MYTILECOLORLIST[i]))
         else:
-            Buttons.append(mybuttons('res/8x10.png', 100 +( i * 70), 760, MYTILECOLORLIST[i]))
-    Buttons.append(mybuttons('res/loadimage.png',520,45))
+            Buttons.append(mybuttons('res/8x10.png', 40 +( i * 70), 660, MYTILECOLORLIST[i]))
+    Buttons.append(mybuttons('res/loadimage.png',570,660))
     Map = map(MAPTYPE1)
 def exit():
     # fill here
@@ -61,7 +62,7 @@ def handle_events(frame_time):
                 Map.ChageMap((Map.nowtype+1)%3)
         elif (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
             for i in range(0, Buttons.__len__()):
-                if Buttons[i].Coll(event.x, 800 - event.y) == True:
+                if Buttons[i].Coll(event.x, 700 - event.y) == True:
                     if i == Buttons.__len__()-1:
                         check1, maptype, count, clear, mylist = fileload().loadfile()
                         if check1 == True:

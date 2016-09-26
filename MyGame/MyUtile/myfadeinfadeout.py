@@ -26,11 +26,11 @@ class FadeObject(Coroutine):
 class FadeInFadeOut(Coroutine):
     def __init__(self):
         super(FadeInFadeOut,self).__init__()
-        self.FadeTile = [[0 for y in range(9)] for x in range(7)]
-        for y in range(0, 9):
+        self.FadeTile = [[0 for y in range(7)] for x in range(7)]
+        for y in range(0, 7):
             for x in range(0, 7):
-                    self.FadeTile[x][y] = FadeObject(  x * 100, y*100)
-        self.StartCoroutine(self.PlayObject(3, 4))
+                    self.FadeTile[x][y] = FadeObject(  x * 100, 50 + (y*100))
+        self.StartCoroutine(self.PlayObject(3, 3))
     def PlayObject(self,x,y):
         if(self.FadeTile[x][y].PlayIng == False):
             self.FadeTile[x][y].ChageCheck()
@@ -40,16 +40,16 @@ class FadeInFadeOut(Coroutine):
                 self.StartCoroutine(self.PlayObject(x+1,y))
             if (x > 0):
                 self.StartCoroutine( self.PlayObject(x - 1, y))
-            if (y < 8):
+            if (y < 7):
                 self.StartCoroutine( self.PlayObject( x, y+1))
             if (y > 0):
                 self.StartCoroutine(self.PlayObject(x, y - 1))
     def Draw(self):
-        for y in range(0, 9):
+        for y in range(0, 7):
             for x in range(0, 7):
                 self.FadeTile[x][y].Draw()
     def Update(self):
         self.RunCoroutine()
-        for y in range(0, 9):
+        for y in range(0, 7):
             for x in range(0, 7):
                 self.FadeTile[x][y].Update()

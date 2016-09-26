@@ -42,11 +42,11 @@ class GameUI:
             if(self.Number == 0):
                 self.Number +=1
     def Draw(self):
-        self.image.drawRGB(560,760,MYTILECOLORLIST[self.Number])
+        self.image.drawRGB(495,660,MYTILECOLORLIST[self.Number])
         if(self.Playing):
-            self.Font.draw(50,760,str(self.ClearCount))
+            self.Font.draw(50,660,str(self.ClearCount))
     def Coll(self,x,y):
-        left,bottom,right,top = 560 - (self.image.w/2) + 10,760 - (self.image.h/2) + 10,560 + (self.image.w/2) - 10,760 + (self.image.h/2) -10
+        left,bottom,right,top = 495 - (self.image.w/2) + 10,660 - (self.image.h/2) + 10,495 + (self.image.w/2) - 10,660 + (self.image.h/2) -10
         left1,bottom1,right1,top1 = x-5,y-5,x+5,y+5
         if left > right1:
             return False
@@ -140,7 +140,7 @@ class map(Coroutine): #
             self.MapTiles = [[0 for y in range(self.yCount)] for x in range(self.xCount)]
             for y in range(0,self.yCount):
                 for x in range(0,self.xCount):
-                    self.MapTiles[x][y] = NoTile(n,60 + (self.xSize/2) + (x * self.xSize),100 + self.ySize/2 + (y * self.ySize),x,y)
+                    self.MapTiles[x][y] = NoTile(n,60 + (self.xSize/2) + (x * self.xSize),10 + self.ySize/2 + (y * self.ySize),x,y)
 
         self.ReSetting();
         #
@@ -149,19 +149,19 @@ class map(Coroutine): #
     def MouseMake(self,event):   # nowmoad 펄스면 맨들기 #트루면 게임
         self.UI.Playing = False
         if (event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
-            if(self.UI.Coll(event.x,800-event.y) == True):
+            if(self.UI.Coll(event.x,700-event.y) == True):
                 self.UI.ClickClearColor()
-            tempx,tempy,temp  = self.MouseToTile(event.x,800 - event.y)
+            tempx,tempy,temp  = self.MouseToTile(event.x,700 - event.y)
             if temp == True and self.NowDraw.NowNumber != -1:
                 self.DrawIng = True
         elif (event.type) == SDL_MOUSEBUTTONUP:
             self.DrawIng = False
         elif (event.type) == SDL_MOUSEMOTION:
             if  self.NowDraw.NowNumber != -1:
-                tempx,tempy, temp = self.MouseToTile(event.x, 800 - event.y)
+                tempx,tempy, temp = self.MouseToTile(event.x, 700 - event.y)
                 if(temp ):
                     self.NowDraw.x = int(60 + (self.xSize/2) + (tempx * self.xSize))
-                    self.NowDraw.y = int(100 + self.ySize/2 + (tempy * self.ySize))
+                    self.NowDraw.y = int(10 + self.ySize/2 + (tempy * self.ySize))
                     self.NowDraw.NowDrawIng = True
                     if self.DrawIng == True:
                         self.NewCreateTile(tempx,tempy,self.NowDraw.NowNumber)
@@ -171,10 +171,10 @@ class map(Coroutine): #
     def MousePlay(self, event):
         self.UI.Playing = True
         if (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
-            tempx, tempy, temp = self.MouseToTile(event.x, 800 - event.y)
+            tempx, tempy, temp = self.MouseToTile(event.x, 700 - event.y)
             if (temp):
                 self.TileCick.x = int(60 + (self.xSize / 2) + (tempx * self.xSize))
-                self.TileCick.y = int(100 + self.ySize / 2 + (tempy * self.ySize))
+                self.TileCick.y = int(10 + self.ySize / 2 + (tempy * self.ySize))
                 self.mx = tempx
                 self.my = tempy
                 self.TileCick.chagecheck = True
@@ -189,7 +189,7 @@ class map(Coroutine): #
             if(self.mx != -1 or self.my != -1):
                 if self.MapTiles[self.mx][self.my].Type != NOTILE:
                     self.MapTiles[self.mx][self.my].ClickTile() #누른타일
-                tempx, tempy, temp = self.MouseToTile(event.x, 800 - event.y) # 땐 타일
+                tempx, tempy, temp = self.MouseToTile(event.x, 700 - event.y) # 땐 타일
                 if temp == True:
                     self.MoveColl(self.MapTiles[self.mx][self.my],self.MapTiles[tempx][tempy],tempx,tempy)
 
@@ -207,17 +207,17 @@ class map(Coroutine): #
         if self.MapTiles[tempx][tempy].Type == number:
             return;
         if number == NOTILE:
-            self.MapTiles[tempx][tempy] = NoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+            self.MapTiles[tempx][tempy] = NoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),10 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
         elif number == ONETILE:
-            self.MapTiles[tempx][tempy] = OneTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx,tempy)
+            self.MapTiles[tempx][tempy] = OneTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),10 + self.ySize / 2 + (tempy * self.ySize), tempx,tempy)
         elif number == TWOTILE:
-            self.MapTiles[tempx][tempy] = TwoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+            self.MapTiles[tempx][tempy] = TwoTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),10 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
         elif number == THREETILE:
-            self.MapTiles[tempx][tempy] = TheerTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+            self.MapTiles[tempx][tempy] = TheerTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),10 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
         elif number == FOURTILE:
-            self.MapTiles[tempx][tempy] = FourTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+            self.MapTiles[tempx][tempy] = FourTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),10 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
         elif number == FIVETILE:
-            self.MapTiles[tempx][tempy] = FiveTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),100 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
+            self.MapTiles[tempx][tempy] = FiveTile(self.nowtype, 60 + (self.xSize / 2) + (tempx * self.xSize),10 + self.ySize / 2 + (tempy * self.ySize), tempx, tempy)
     def MoveColl(self,DownTile,UpTile,x,y):
         if UpTile.Type == NOTILE or DownTile.Type == NOTILE or UpTile.Type == DownTile.Type:
             return
