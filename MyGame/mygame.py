@@ -1,5 +1,5 @@
 import game_framework
-import menu
+import Logo.Logo
 
 
-game_framework.run(menu)
+game_framework.run(Logo.Logo)

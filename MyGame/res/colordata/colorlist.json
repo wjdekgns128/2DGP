@@ -1,10 +1,10 @@
 {
 	"count" : {
-		"number": "1"
+		"number": "8"
 	},
 	"colorlists" : [
 	{
-		"nmae": "Palette1",
+		"name": "Palette1",
 		"money": "500",
 		"color1": "218,51,64",
 		"color2": "255,205,0",
@@ -13,7 +13,7 @@
 		"color5" : "40,170,226"
 	},
 	{
-		"nmae": "Palette2",
+		"name": "Palette2",
 		"money": "500",
 		"color1": "152,255,246",
 		"color2": "157,255,144",
@@ -22,7 +22,7 @@
 		"color5" : "255,245,116"
 	},
 	{
-		"nmae": "Palette3",
+		"name": "Palette3",
 		"money": "500",
 		"color1": "45,197,46",
 		"color2": "226,255,159",
@@ -31,7 +31,7 @@
 		"color5" : "51,128,255"
 	},
 	{
-		"nmae": "Palette4",
+		"name": "Palette4",
 		"money": "500",
 		"color1": "23,165,153",
 		"color2": "22,93,191",
@@ -39,7 +39,7 @@
 		"color4": "223,0,125",
 		"color5" : "95,193,0"
 	},{
-		"nmae": "Palette5",
+		"name": "Palette5",
 		"money": "500",
 		"color1": "255,53,53",
 		"color2": "255,88,188",
@@ -48,7 +48,7 @@
 		"color5" : "229,207,35"
 	},
 		{
-		"nmae": "Palette6",
+		"name": "Palette6",
 		"money": "500",
 		"color1": "227,3,127",
 		"color2": "186,225,162",
@@ -57,13 +57,23 @@
 		"color5" : "242,206,214"
 	},
 		{
-		"nmae": "Palette7",
+		"name": "Palette7",
 		"money": "500",
 		"color1": "206,19,9",
 		"color2": "132,188,30",
 		"color3": "247,125,18",
 		"color4": "231,223,17",
 		"color5" : "80,188,200"
+	},
+		{
+		"name": "Gloomy Red",
+		"money": "1000",
+		"color1": "225,160,129",
+		"color2": "220,124,133",
+		"color3": "229,181,186",
+		"color4": "156,17,98",
+		"color5" : "134,65,67"
 	}
+
 ]
 }

@@ -6,6 +6,7 @@ class FadeObject(Coroutine):
     def __init__(self,x,y):
         super(FadeObject,self).__init__()
         self.drawimage = load_image("res/fadeobject.png")
+
         self.x = x
         self.y = y
         self.angle = 0
@@ -18,7 +19,6 @@ class FadeObject(Coroutine):
         for i in range(0,11):
             self.drawimage.opacify(1 - (i*0.1))
             self.angle += 0.15
-
             yield WaitForSeconds(0.035)
 
     def Update(self):
