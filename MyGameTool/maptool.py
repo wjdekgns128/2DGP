@@ -10,6 +10,7 @@ Buttons = []
 name = "MapTool"
 def enter():
     global Map
+    global imste;
     end = MYTILECOLORLIST.__len__()
 
     open_canvas(600,700,sync = True)
@@ -19,6 +20,7 @@ def enter():
         else:
             Buttons.append(mybuttons('res/8x10.png', 40 +( i * 70), 660, MYTILECOLORLIST[i]))
     Buttons.append(mybuttons('res/loadimage.png',570,660))
+    imste = load_image("res/Back.png")
     Map = map(MAPTYPE1)
 def exit():
     # fill here
@@ -33,8 +35,12 @@ def update(frame_time):
 
 def draw(frame_time):
     # fill here
+    global imste;
+
     global check
     clear_canvas()
+    imste.draw(300,350)
+
     Map.Draw()
     for i in range(0,Buttons.__len__()):
         Buttons[i].Draw()
