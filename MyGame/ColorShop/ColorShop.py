@@ -47,15 +47,19 @@ class ColorShopMain:
         self.BackImage = load_image("res/Back.png")
     def Draw(self):
         self.BackImage.draw(300, 350)
-
         for i in range(0, self.Count):
             self.ColorLists[i].Draw()
         self.namelmage.draw(160, 655)
     def Update(self):
-       if self.DownClickCheck == False and not self.Len == 0:
-           print(self.Len)
-           print(self.UpOnDown)
 
+       if self.DownClickCheck == False and not self.Len == 0:
+           if self.UpOnDown == 1:
+               for i in range(0, self.Count):
+                   self.ColorLists[i].Setting(10)
+           elif self.UpOnDown == 2:
+                for i in range(0, self.Count):
+                  self.ColorLists[i].Setting(-10)
+           self.Len -= 1
 
 
     def Mouse(self,event):
@@ -67,9 +71,9 @@ class ColorShopMain:
         elif (event.type) == SDL_MOUSEBUTTONUP:
             self.DownClickCheck = False
             if self.UpOnDown == 1:
-                self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint + 5))
-            elif self.UpOnDown == 0:
-                self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint - 5))
+                self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint + 5)) + 7
+            elif self.UpOnDown == 2:
+                self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint - 5)) + 7
 
 
         elif (event.type == (SDL_MOUSEMOTION)):
@@ -77,10 +81,10 @@ class ColorShopMain:
             if self.DownClickCheck == True:
                 if (700 - event.y> self.DownmouseYPoint+5):
                     self.UpOnDown = 1
-                    check = 5
+                    check = 13
                 elif (700 - event.y < self.DownmouseYPoint-5):
                     self.UpOnDown = 2
-                    check = -5
+                    check = -13
                 else:
                     self.UpOnDown = 0
                     self.Len = 0
@@ -101,11 +105,9 @@ def enter():
 
 def exit():
     global FadeinOut
-    global ColorManager
 
     # fill here
     del(FadeinOut)
-    del(ColorManager)
 
 def update(frame_time):
     global ColorManager
