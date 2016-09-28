@@ -51,7 +51,7 @@ class UserManager(SingletonInstane):
         f = open(os.getcwd() + self.Name, "w")
         f.writelines(str(self.NowMoney) + " " + str(self.NowNumber) + " " + str(self.NowColor) + " " + str(self.NowBuyColor) + "\n")
         for i in range(0, self.NowBuyColor):
-            f.writelines(str(self.NowBuyColorList[i]))
+            f.writelines(str(self.NowBuyColorList[i]) + "\n")
         f.close()
 class MapManager(SingletonInstane):
     def __init__(self):
