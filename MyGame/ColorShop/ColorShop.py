@@ -32,93 +32,104 @@ class ColorShopList:
                 self.BuyImage[0].draw(self.x+290,self.y+35,25,25)
     def Setting(self,y):
         self.y += y
-ColorLists = []
-Count = Sing_ColorLisManager.GetColorMaxCount()
+
+class ColorShopMain:
+    def __init__(self):
+        self.ColorLists = []
+        self.UpOnDown = 0
+        self.DownClickCheck = False
+        self.DownmouseYPoint = 0
+        self.Len = 0
+        self.Count = Sing_ColorLisManager.GetColorMaxCount()
+        for i in range(0, self.Count):
+            self.ColorLists.append(ColorShopList(60, 535 - (i * 105), i))
+        self.namelmage = load_image("res/ColorShop_Logo.png")
+        self.BackImage = load_image("res/Back.png")
+    def Draw(self):
+        self.BackImage.draw(300, 350)
+
+        for i in range(0, self.Count):
+            self.ColorLists[i].Draw()
+        self.namelmage.draw(160, 655)
+    def Update(self):
+       if self.DownClickCheck == False and not self.Len == 0:
+           print(self.Len)
+           print(self.UpOnDown)
+
+
+
+    def Mouse(self,event):
+        if(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
+            self.DownClickCheck = True
+            self.DownmouseYPoint = 700 - event.y
+            self.UpOnDown = 0
+            self.Len = 0
+        elif (event.type) == SDL_MOUSEBUTTONUP:
+            self.DownClickCheck = False
+            if self.UpOnDown == 1:
+                self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint + 5))
+            elif self.UpOnDown == 0:
+                self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint - 5))
+
+
+        elif (event.type == (SDL_MOUSEMOTION)):
+            check = 0
+            if self.DownClickCheck == True:
+                if (700 - event.y> self.DownmouseYPoint+5):
+                    self.UpOnDown = 1
+                    check = 5
+                elif (700 - event.y < self.DownmouseYPoint-5):
+                    self.UpOnDown = 2
+                    check = -5
+                else:
+                    self.UpOnDown = 0
+                    self.Len = 0
+                    return
+                self.DownmouseYPoint = 700 - event.y
+                for i in range(0, self.Count):
+                    self.ColorLists[i].Setting(check)
+
+    def GetLen(self,y,y1):
+        return (int(math.fabs(y - y1)%100))
+
 def enter():
     print("컬러샵")
     global  FadeinOut
-    global BackImage
-    global namelmage
-    global mousey
-    global mousecheck
-    global mouseYPoint
-    global mouseYPointTemp
-
-    mousecheck = False
-    mousey = 0
-    mouseYPoint = 0
-    mouseYPointTemp = 100
-    for i in range(0,Count):
-        ColorLists.append(ColorShopList(60,535-(i*105),i))
-    namelmage = load_image("res/ColorShop_Logo.png")
-    BackImage = load_image("res/Back.png")
+    global ColorManager
+    ColorManager = ColorShopMain()
     FadeinOut = FadeInFadeOut()
 
 def exit():
     global FadeinOut
-    global BackImage
-    global namelmage
+    global ColorManager
 
     # fill here
     del(FadeinOut)
-    del(BackImage)
-    del(namelmage)
+    del(ColorManager)
 
 def update(frame_time):
+    global ColorManager
     FadeinOut.Update()
+    ColorManager.Update()
 def draw(frame_time):
     global FadeinOut
-    global BackImage
-    global namelmage
+    global ColorManager
 
     # fill here
     clear_canvas()
-    BackImage.draw(300,350)
 
-    for i in range(0, Count):
-        ColorLists[i].Draw()
-    namelmage.draw(160,655)
     FadeinOut.Draw()
+    ColorManager.Draw()
     update_canvas()
 
 def handle_events(frame_time):
-    global mousey
-    global mousecheck
-    global mouseYPointTemp
-
-    global mouseYPoint
+    global ColorManager
     events = get_events()
     for event in events:
         if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_9):
             game_framework.change_state(Menu.Menu)
-        elif(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
-            if(mousecheck == False):
-                mousecheck = True
-                mouseYPoint  = 700 - event.y
-        elif (event.type) == SDL_MOUSEBUTTONUP:
-             mousecheck = False
-        elif (event.type == (SDL_MOUSEMOTION)):
-            testcheck = True
-            if mousecheck == True:
-                if (700 - event.y< mouseYPoint-5):
-                    if(mouseYPointTemp > 100):
-                            mousey = -10
-                            mouseYPointTemp -= 10
-                    else:
-                        testcheck = False
-                elif (700 - event.y > mouseYPoint+5):
-                        if mouseYPointTemp < (Count*105) - 430:
-                            mousey = 10
-                            mouseYPointTemp += 10
-                        else:
-                            testcheck = False
-                else:
-                    testcheck = False
-
-                if testcheck == True:
-                    for i in range(0, Count):
-                        ColorLists[i].Setting(mousey)
-                        mouseYPoint = 700 - event.y
+        else:
+            ColorManager.Mouse(event)
 def pause(): pass
 def resume(): pass
 
