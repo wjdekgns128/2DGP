@@ -36,7 +36,10 @@ class ColorShopList:
         self.state = GET
         #Sing_UserManager.NowM
     def RealBuy(self):
+        if(Sing_UserManager.NowMoney < int(Sing_ColorLisManager.GetColorMoney(self.Number))):
+            return
         self.SetBuy()
+        Sing_UserManager.NowMoney -= (int(Sing_ColorLisManager.GetColorMoney(self.Number)))
         Sing_UserManager.NowBuyColor += 1
         Sing_UserManager.NowBuyColorList.append(self.Number)
         Sing_UserManager.Save()
@@ -86,9 +89,12 @@ class ColorShopMain:
         self.Len = 0
         self.PopUp = False
         self.NowNumber = 0
+        self.MyFontText = load_font("res/font/GodoB.ttf",20)
         self.PopBackImage = load_image("res/Block_Image.png")
         self.FontText = load_font("res/font/GodoB.ttf",70)
         self.Button = [load_image("res/okbutton.png"),load_image("res/nobutton.png")]
+        self.BackButton = load_image("res/Home.png")
+        self.StartIcon = load_image("res/Star_Icon.png")
         self.Count = Sing_ColorLisManager.GetColorMaxCount()
         for i in range(0, self.Count):
             self.ColorLists.append(ColorShopList(60, 535 - (i * 105), i))
@@ -100,7 +106,11 @@ class ColorShopMain:
         self.BackImage = load_image("res/Back.png")
     def Draw(self):
         self.BackImage.draw(300, 350)
+        self.BackButton.draw(550,650)
+        self.StartIcon.draw(460,665,45,45)
+        self.StartIcon.draw(400,665,45,45)
 
+        self.MyFontText.draw(380,625,str(Sing_UserManager.NowMoney),color = (255,255,255))
         for i in range(0, self.Count):
             self.ColorLists[i].Draw()
         if (self.PopUp == True):
@@ -125,8 +135,15 @@ class ColorShopMain:
             pass
 
     def Mouse(self,event):
-        if(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
+        if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_ESCAPE):
             if self.PopUp == False:
+                game_framework.change_state(Menu.Menu)
+            else:
+                self.PopUp = False
+        elif(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
+            if self.Coll(550,650,event.x,700-event.y):
+                game_framework.change_state(Menu.Menu)
+            elif self.PopUp == False:
                 for i in range(0, self.Count):
                     if self.ColorLists[i].Coll(event.x , 700-event.y):
                         if self.ColorLists[i].CollCheck() == 1:
@@ -184,41 +201,44 @@ class ColorShopMain:
     def GetLen(self,y,y1): # 850 , 535
         return (int(math.fabs(y - y1)%100))
 
+    def Coll(self, x1, y1, x2, y2):
+        left, bottom, right, top = x1 - 40, y1 - 35, x1 + 40, y1 + 35
+        left1, bottom1, right1, top1 = x2 - 2, y2 - 2, x2 + 2, y2 + 2
+        if left > right1:
+            return False
+        if right < left1:
+            return False
+        if top < bottom1:
+            return False
+        if bottom > top1:
+            return False
+        return True
 def enter():
     print("컬러샵")
-    global  FadeinOut
     global  ColorManager
     ColorManager = ColorShopMain()
-    FadeinOut = FadeInFadeOut()
 
 def exit():
-    global FadeinOut
-
+    pass
     # fill here
-    del(FadeinOut)
 
 def update(frame_time):
     global ColorManager
-    FadeinOut.Update()
     ColorManager.Update()
 def draw(frame_time):
-    global FadeinOut
     global ColorManager
 
     # fill here
 
     clear_canvas()
-    FadeinOut.Draw()
     ColorManager.Draw()
+
     update_canvas()
 
 def handle_events(frame_time):
     global ColorManager
     events = get_events()
     for event in events:
-        if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_9):
-            game_framework.change_state(Menu.Menu)
-        else:
             ColorManager.Mouse(event)
 def pause(): pass
 def resume(): pass

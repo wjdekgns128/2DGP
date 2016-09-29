@@ -11,7 +11,10 @@ class FadeObject(Coroutine):
         self.y = y
         self.angle = 0
         self.PlayIng = False
+        self.Check = False
     def Draw(self):
+        if self.Check:
+            return
         self.drawimage.rotate_draw(self.angle,self.x,self.y)
     def ChageCheck(self):
         self.StartCoroutine(self.StartChage())
@@ -19,13 +22,18 @@ class FadeObject(Coroutine):
         for i in range(0,11):
             self.drawimage.opacify(1 - (i*0.1))
             self.angle += 0.15
-            yield WaitForSeconds(0.035)
-
+            yield WaitForSeconds(0.03)
+        self.Check = True
     def Update(self):
+        if self.Check:
+            return
         self.RunCoroutine()
 class FadeInFadeOut(Coroutine):
+    def __del__(self):
+        del(self.FadeTile)
     def __init__(self):
         super(FadeInFadeOut,self).__init__()
+        self.PlayIng = False
         self.FadeTile = [[0 for y in range(7)] for x in range(7)]
         for y in range(0, 7):
             for x in range(0, 7):
@@ -35,7 +43,7 @@ class FadeInFadeOut(Coroutine):
         if(self.FadeTile[x][y].PlayIng == False):
             self.FadeTile[x][y].ChageCheck()
             self.FadeTile[x][y].PlayIng = True
-            yield WaitForSeconds(0.052)
+            yield WaitForSeconds(0.035)
             if(x < 6):
                 self.StartCoroutine(self.PlayObject(x+1,y))
             if (x > 0):
@@ -44,6 +52,7 @@ class FadeInFadeOut(Coroutine):
                 self.StartCoroutine( self.PlayObject( x, y+1))
             if (y > 0):
                 self.StartCoroutine(self.PlayObject(x, y - 1))
+
     def Draw(self):
         for y in range(0, 7):
             for x in range(0, 7):

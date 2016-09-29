@@ -94,7 +94,6 @@ class MapManager(SingletonInstane):
             t = line.split(' ')
             for i in range(0,t.__len__()):
                 self.ClearNumber[n][i] = int(t[i])
-                print(self.ClearNumber[n][i])
         f.close()
     def Save(self,n): # 챕터 저장
         f = open(os.getcwd()  + "/res/userdata/chapter/" + "ch" + str(n+1) + ".txt", "w")
