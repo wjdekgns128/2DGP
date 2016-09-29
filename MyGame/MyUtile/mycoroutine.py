@@ -17,6 +17,8 @@ class CoroutineObject:
 class Coroutine:
     def __init__(self):
         self.CroList = []
+    def __del__(self):
+        self.CroList.clear()
     def StartCoroutine(self, fun):
         self.CroList.append(CoroutineObject(fun))
     def RunCoroutine(self):

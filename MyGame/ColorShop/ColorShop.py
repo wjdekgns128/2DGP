@@ -1,6 +1,6 @@
 from pico2d import *
 import game_framework
-import Menu.Menu
+import Selete.Selete
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 class ColorShopList:
@@ -89,12 +89,13 @@ class ColorShopMain:
         self.Len = 0
         self.PopUp = False
         self.NowNumber = 0
-        self.MyFontText = load_font("res/font/GodoB.ttf",20)
-        self.PopBackImage = load_image("res/Block_Image.png")
+
         self.FontText = load_font("res/font/GodoB.ttf",70)
         self.Button = [load_image("res/okbutton.png"),load_image("res/nobutton.png")]
         self.BackButton = load_image("res/Home.png")
         self.StartIcon = load_image("res/Star_Icon.png")
+        self.MyFontText = load_font("res/font/GodoB.ttf", 20)
+        self.PopBackImage = load_image("res/Block_Image.png")
         self.Count = Sing_ColorLisManager.GetColorMaxCount()
         for i in range(0, self.Count):
             self.ColorLists.append(ColorShopList(60, 535 - (i * 105), i))
@@ -137,12 +138,12 @@ class ColorShopMain:
     def Mouse(self,event):
         if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_ESCAPE):
             if self.PopUp == False:
-                game_framework.change_state(Menu.Menu)
+                game_framework.change_state(Selete.Selete)
             else:
                 self.PopUp = False
         elif(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
             if self.Coll(550,650,event.x,700-event.y):
-                game_framework.change_state(Menu.Menu)
+                game_framework.change_state(Selete.Selete)
             elif self.PopUp == False:
                 for i in range(0, self.Count):
                     if self.ColorLists[i].Coll(event.x , 700-event.y):
@@ -219,7 +220,8 @@ def enter():
     ColorManager = ColorShopMain()
 
 def exit():
-    pass
+    global  ColorManager
+    del(ColorManager)
     # fill here
 
 def update(frame_time):

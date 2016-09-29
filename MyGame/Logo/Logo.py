@@ -13,7 +13,6 @@ def exit():
 def update(frame_time):
     pass
 def draw(frame_time):
-    global FadeinOut
     # fill here
     clear_canvas()
 

@@ -1,6 +1,6 @@
 from pico2d import *
 import game_framework
-import ColorShop.ColorShop
+import Selete.Selete
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 def enter():
@@ -36,7 +36,7 @@ def handle_events(frame_time):
     events = get_events()
     for event in events:
         if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_0):
-            game_framework.change_state(ColorShop.ColorShop)
+            game_framework.push_state(Selete.Selete)
 
 
 def pause(): pass
