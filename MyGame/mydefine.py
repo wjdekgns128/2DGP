@@ -10,7 +10,7 @@ BUY,GET,SELETE = 0,1,2
 MAPTYPE1,MAPTYPE2,MAPTYPE3 = 0,1,2
 
 NOTILE,ONETILE,TWOTILE,THREETILE,FOURTILE,FIVETILE= 0,1,2,3,4,5
-
-Sing_UserManager = UserManager.instance()
 Sing_ColorLisManager = ColorManager.instance()
+Sing_UserManager = UserManager.instance()
 Sing_MapListManager = MapManager().instance()
+

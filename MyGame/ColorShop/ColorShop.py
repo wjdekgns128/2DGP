@@ -187,7 +187,7 @@ class ColorShopMain:
 def enter():
     print("컬러샵")
     global  FadeinOut
-    global ColorManager
+    global  ColorManager
     ColorManager = ColorShopMain()
     FadeinOut = FadeInFadeOut()
 
@@ -206,8 +206,8 @@ def draw(frame_time):
     global ColorManager
 
     # fill here
-    clear_canvas()
 
+    clear_canvas()
     FadeinOut.Draw()
     ColorManager.Draw()
     update_canvas()
