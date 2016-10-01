@@ -22,7 +22,7 @@ class Tiles(Coroutine):
         if( n == NOTILE):
             self.MyColor = SDL_Color(116,116,116)
         else:
-            self.MyColor = Sing_ColorLisManager.GetColorNumber(0,n-1)
+            self.MyColor = Sing_ColorLisManager.GetColorNumber(Sing_UserManager.NowColor,n-1)
         self.StartCoroutine(self.__StartInitTile())
 
     def Draw(self):

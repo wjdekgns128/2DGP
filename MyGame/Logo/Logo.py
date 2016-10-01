@@ -1,4 +1,6 @@
-from Menu.Menu import *
+import Menu.Menu
+import game_framework
+
 
 from mydefine import *
 

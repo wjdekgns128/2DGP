@@ -1,27 +1,27 @@
 import game_framework
-from Game.Map.Map import *
 from mydefine import *
-import ColorShop.ColorShop
+from Game.Map.Map import *
 
 
 
 def enter():
     print("게임")
-    global  DrawMap
-    DrawMap = Map()
-    DrawMap.MapSetting(0)
-
+    global GameMapManager
+    GameMapManager = Map()
+    GameMapManager.MapSetting()
 def exit():
-    global DrawMap
-    del (DrawMap)
+    global GameMapManager
+    del(GameMapManager)
 def update(frame_time):
-    global DrawMap
-    DrawMap.Update()
+    global GameMapManager
+    GameMapManager.Update()
+
 def draw(frame_time):
-    global DrawMap
     # fill here
+    global GameMapManager
+
     clear_canvas()
-    DrawMap.Draw()
+    GameMapManager.Draw()
     update_canvas()
 
 def handle_events(frame_time):
@@ -29,8 +29,7 @@ def handle_events(frame_time):
     events = get_events()
     for event in events:
         if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_ESCAPE):
-            game_framework.quit()
-
+            game_framework.pop_state()
 
 
 def pause(): pass

@@ -47,7 +47,10 @@ class MapManager():
         self.Dir_List = glob.glob('res/mapdata/*')
         self.File_List = []
         self.ClearNumber = []
+        self.NowCh = 0
+        self.NowStage = 0
     def LoadCh(self):
+        self.ClearCh = []
         z = os.getcwd() + "/res/chclear"
         if not os.path.isdir(z):
             os.makedirs(z)
@@ -57,9 +60,12 @@ class MapManager():
             for i in range(0, self.Dir_List.__len__()):
                 if i == 0:
                     self.ClearCh.append(1)
+                    f1.writelines("1 ")
+
                 else:
                     self.ClearCh.append(0)
-                f1.writelines(str(self.ClearCh[i]) + " ")
+                    f1.writelines("0 ")
+
             f1.close()
         else:
             f1 = open(os.getcwd() + "/res/chclear/claer.txt", "r")
@@ -105,6 +111,12 @@ class MapManager():
             else:
                f.writelines(str(self.ClearNumber[n][i]) + " ")
         f.close()
+    def SaveCh(self,n):
+        self.ClearCh[n] = 1
+        f1 = open(os.getcwd() + "/res/chclear/claer.txt", "w")
+        for i in range(0, self.Dir_List.__len__()):
+            f1.writelines(str(self.ClearCh[i]) + " ")
+        f1.close()
     def GetChatper(self):
         return self.File_List.__len__()
     def GetStage(self,n):

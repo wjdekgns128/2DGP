@@ -42,12 +42,13 @@ class ColorShopList:
         #Sing_UserManager.NowM
     def RealBuy(self):
         if(Sing_UserManager.NowMoney < int(Sing_ColorLisManager.GetColorMoney(self.Number))):
-            return
+            return True
         self.SetBuy()
         Sing_UserManager.NowMoney -= (int(Sing_ColorLisManager.GetColorMoney(self.Number)))
         Sing_UserManager.NowBuyColor += 1
         Sing_UserManager.NowBuyColorList.append(self.Number)
         Sing_UserManager.Save()
+        return False
     def SetColor(self): #칼라 장착시
         self.state = SELETE
     def Coll(self,x1,y1):
@@ -95,11 +96,12 @@ class ColorShopMain:
         self.PopUp = False
         self.NowNumber = 0
 
-        self.FontText = load_font("res/font/GodoB.ttf",70)
-        self.Button = [load_image("res/okbutton.png"),load_image("res/nobutton.png")]
+
         self.BackButton = load_image("res/Home.png")
         self.StartIcon = load_image("res/Star_Icon.png")
         self.MyFontText = load_font("res/font/GodoB.ttf", 20)
+        self.FontText = load_font("res/font/GodoB.ttf", 70)
+        self.Button = [load_image("res/okbutton.png"), load_image("res/nobutton.png")]
         self.PopBackImage = load_image("res/Block_Image.png")
         self.Count = Sing_ColorLisManager.GetColorMaxCount()
         for i in range(0, self.Count):
@@ -112,11 +114,12 @@ class ColorShopMain:
         self.BackImage = load_image("res/Back.png")
     def __del__(self):
         del(self.ColorLists)
-        del(self.Button)
-        del(self.FontText)
+
         del(self.BackButton)
         del(self.StartIcon)
         del(self.MyFontText)
+        del (self.Button)
+        del (self.FontText)
         del(self.PopBackImage)
         del(  self.namelmage)
         del(self.BackImage )
@@ -151,14 +154,11 @@ class ColorShopMain:
             pass
 
     def Mouse(self,event):
-        if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_ESCAPE):
-            if self.PopUp == False:
-                game_framework.change_state(Selete.Selete)
-            else:
-                self.PopUp = False
-        elif(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
+
+        if(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
             if self.Coll(550,650,event.x,700-event.y):
                 game_framework.change_state(Selete.Selete)
+                return True
             elif self.PopUp == False:
                 for i in range(0, self.Count):
                     if self.ColorLists[i].Coll(event.x , 700-event.y):
@@ -176,11 +176,12 @@ class ColorShopMain:
                 self.UpOnDown = 0
                 self.Len = 0
             else:
+                testcheck = False
                 for i in range(0, 2):
                     if self.Coll(230 + (i * 140),280,event.x,700-event.y):
                         if i == 0:
-                            self.ColorLists[self.NowNumber].RealBuy()
-                        self.PopUp = False
+                            testcheck = self.ColorLists[self.NowNumber].RealBuy()
+                        self.PopUp = testcheck
                         self.NowNumber = 0
                         break
 
@@ -214,6 +215,8 @@ class ColorShopMain:
                 self.DownmouseYPoint = 700 - event.y
                 for i in range(0, self.Count):
                     self.ColorLists[i].Setting(check)
+
+        return False
     def GetLen(self,y,y1): # 850 , 535
         return (int(math.fabs(y - y1)%100))
 
@@ -235,8 +238,7 @@ def enter():
     ColorManager = ColorShopMain()
 
 def exit():
-    global  ColorManager
-    del(ColorManager)
+    pass
     # fill here
 
 def update(frame_time):
@@ -256,7 +258,17 @@ def handle_events(frame_time):
     global ColorManager
     events = get_events()
     for event in events:
-            ColorManager.Mouse(event)
+        if (event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):
+            if ColorManager.PopUp == False:
+                game_framework.change_state(Selete.Selete)
+                events.clear()
+                return
+            else:
+                ColorManager.PopUp = False
+        else:
+            if ColorManager.Mouse(event) == True:
+                events.clear()
+                return
 def pause(): pass
 def resume(): pass
 
