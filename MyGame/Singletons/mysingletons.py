@@ -8,28 +8,16 @@ import os
 import sys
 from pico2d import *
 import glob
-class SingletonInstane:
-  __instance = None
-
-  @classmethod
-  def __getInstance(cls):
-    return cls.__instance
-
-  @classmethod
-  def instance(cls, *args, **kargs):
-    cls.__instance = cls(*args, **kargs)
-    cls.instance = cls.__getInstance
-    return cls.__instance
-class UserManager(SingletonInstane):
+class UserManager:
     def __init__(self): # 현재돈, 장착중인 색상,소지하고있는 색상들갯수 ~~
-        self.NowMoney = 0 #소지돈
-        self.NowColor = 0 # 장착중인 컬러
-        self.NowBuyColor = 1 # 산 컬러수
-        self.NowBuyColorList = [] #현재산 리스트의 번호들
+        self.NowMoney = 0  # 소지돈
+        self.NowColor = 0  # 장착중인 컬러
+        self.NowBuyColor = 1  # 산 컬러수
+        self.NowBuyColorList = []  # 현재산 리스트의 번호들
         self.NowBuyColorList.append(0)
         self.Name = "/res/userdata/user.txt"
-        self.__Load()
-    def __Load(self):
+    def Load(self):
+
         z = os.getcwd() + "/res/userdata"
         if not os.path.isdir(z):
             os.makedirs(z)
@@ -53,26 +41,40 @@ class UserManager(SingletonInstane):
         f.writelines(str(self.NowMoney) + " "  + str(self.NowColor) + " " + str(self.NowBuyColor) + "\n")
         for i in range(0, self.NowBuyColor):
             f.writelines(str(self.NowBuyColorList[i]) + "\n")
-        f.close()
-MapChekc = False
-class MapManager(SingletonInstane):
+class MapManager():
     def __init__(self):
-        global  MapChekc
-        if MapChekc == True:
-            return
-
-        self.__Load()
-        MapChekc = True
-
-    def __Load(self):
+        self.ClearCh = []
         self.Dir_List = glob.glob('res/mapdata/*')
         self.File_List = []
         self.ClearNumber = []
-
+    def LoadCh(self):
+        z = os.getcwd() + "/res/chclear"
+        if not os.path.isdir(z):
+            os.makedirs(z)
+        z5 = os.getcwd() + "/res/chclear/claer.txt"
+        if not os.path.isfile(z5):
+            f1 = open(os.getcwd() + "/res/chclear/claer.txt", "w")
+            for i in range(0, self.Dir_List.__len__()):
+                if i == 0:
+                    self.ClearCh.append(1)
+                else:
+                    self.ClearCh.append(0)
+                f1.writelines(str(self.ClearCh[i]) + " ")
+            f1.close()
+        else:
+            f1 = open(os.getcwd() + "/res/chclear/claer.txt", "r")
+            str = f1.readline()
+            st1 = str.split(' ')
+            for i in range(0, st1.__len__()-1):
+                self.ClearCh.append(int(st1[i]))
+            f1.close()
+    def GetChClear(self,n):
+        return self.ClearCh[n]
+    def Load(self):
+        self.LoadCh();
         for i in range(0, self.Dir_List.__len__()):
             Temp = (glob.glob(self.Dir_List[i] + "/*.txt"))
             self.File_List.append(Temp)
-
         for i in range(0, self.Dir_List.__len__()):
             Temp = []
             for j in range(0,self.File_List[i].__len__()):
@@ -82,8 +84,8 @@ class MapManager(SingletonInstane):
         if not os.path.isdir(z):
             os.makedirs(z)
         for i in range(0,self.Dir_List.__len__()):
-            z = os.getcwd()  + "/res/userdata/chapter/" + "ch" + str(i+1) + ".txt"
-            if not os.path.isfile(z):
+            z5 = os.getcwd()  + "/res/userdata/chapter/" + "ch" + str(i+1) + ".txt"
+            if not os.path.isfile(z5):
                 self.Save(i)
             else:
                 self.__LoadChar(i)
@@ -124,16 +126,12 @@ class MapManager(SingletonInstane):
                     mylist.append(int(strline[i]))
         f.close()
         return maptype,count,clear,mylist
-class ColorManager(SingletonInstane):
+class ColorManager():
     def __init__(self):
-        self.Ing = False
-        self.colorListName = ['color1','color2','color3','color4','color5']
+        self.colorListName = ['color1', 'color2', 'color3', 'color4', 'color5']
         self.MaxNumber = 0
-        self.Load()
+
     def Load(self):
-        if(self.Ing):
-            return
-        self.Ing = True
         f = open("res/colordata/colorlist.json", 'r')
         self.js = json.loads(f.read())
         f.close()

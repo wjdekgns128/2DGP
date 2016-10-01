@@ -18,7 +18,12 @@ class ColorShopList:
 
         self.ColorImage = load_image("res/6x8.png")
         self.state = BUY  #사야되는 상황 # 가지고있는상황, # 장착중인 상황 BUY,GET,SELETE
-
+    def __del__(self):
+        del(self.ColorImage)
+        del(self.BackImage)
+        del(self.FontText)
+        del(self.FontText1)
+        del(self.BuyImage)
     def Draw(self):
         if( self.y < 550):
             self.BackImage.draw(self.x + 130, self.y)
@@ -105,6 +110,16 @@ class ColorShopMain:
         self.ColorLists[self.Check].SetColor()
         self.namelmage = load_image("res/ColorShop_Logo.png")
         self.BackImage = load_image("res/Back.png")
+    def __del__(self):
+        del(self.ColorLists)
+        del(self.Button)
+        del(self.FontText)
+        del(self.BackButton)
+        del(self.StartIcon)
+        del(self.MyFontText)
+        del(self.PopBackImage)
+        del(  self.namelmage)
+        del(self.BackImage )
     def Draw(self):
         self.BackImage.draw(300, 350)
         self.BackButton.draw(550,650)

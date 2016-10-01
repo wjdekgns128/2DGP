@@ -6,7 +6,6 @@ from mydefine import *
 def enter():
     open_canvas(600, 700, sync=True)
 
-
 def exit():
     pass
 
