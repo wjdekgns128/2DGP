@@ -94,7 +94,6 @@ class map(Coroutine): #
         for y in range(0, self.yCount):
             for x in range(0, self.xCount):
                 self.MapTiles[x][y].Update()
-
         self.RunCoroutine()
     def Draw(self):
         for y in range(0, self.yCount):

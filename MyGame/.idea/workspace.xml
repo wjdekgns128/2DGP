@@ -2,45 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ddf0896-c592-4527-ab78-e7d5228dcf63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/chclear/claer.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test - 복사본 (2) - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test1 - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test1 - 복사본 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test1 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본 (2) - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본 (3).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본 - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본 - 복사본 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch1/test2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test - 복사본 (2) - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test1 - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test1 - 복사본 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test1 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본 (2) - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본 (3).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본 - 복사본 (2).txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본 - 복사본 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2 - 복사본.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/mapdata/ch2/test2.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/Game.py" afterPath="$PROJECT_DIR$/Game/Game.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/Map/Map.py" afterPath="$PROJECT_DIR$/Game/Map/Map.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Menu/Menu.py" afterPath="$PROJECT_DIR$/Menu/Menu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Selete/Selete.py" afterPath="$PROJECT_DIR$/Selete/Selete.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Singletons/mysingletons.py" afterPath="$PROJECT_DIR$/Singletons/mysingletons.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logo/Logo.py" afterPath="$PROJECT_DIR$/Logo/Logo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/userdata/chapter/ch1.txt" afterPath="$PROJECT_DIR$/res/userdata/chapter/ch1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/userdata/user.txt" afterPath="$PROJECT_DIR$/res/userdata/user.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyGameTool/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MyGameTool/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyGameTool/MapPy/map.py" afterPath="$PROJECT_DIR$/../MyGameTool/MapPy/map.py" />
     </list>
     <ignored path="MyGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,7 +30,7 @@
       <file leaf-file-name="Selete.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Selete/Selete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="3135">
               <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -75,8 +42,8 @@
       <file leaf-file-name="pico2d.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="283" column="40" selection-start-line="283" selection-start-column="18" selection-end-line="283" selection-end-column="40" />
+            <state relative-caret-position="114">
+              <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -85,7 +52,7 @@
       <file leaf-file-name="Game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-288">
+            <state relative-caret-position="-221">
               <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
@@ -95,7 +62,7 @@
       <file leaf-file-name="Menu.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Menu/Menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="133">
               <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -104,21 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game_framework.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game_framework.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Map/Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="200" column="75" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
+            <state relative-caret-position="247">
+              <caret line="249" column="37" selection-start-line="241" selection-start-column="11" selection-end-line="249" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -126,10 +83,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Tiles.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Map/Tiles.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="33" column="51" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Logo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Logo/Logo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pixels.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/sdl2/pixels.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="258" column="0" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mycoroutine.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyUtile/mycoroutine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="15" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="mysingletons.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Singletons/mysingletons.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
+            <state relative-caret-position="684">
               <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -163,7 +162,6 @@
         <option value="$PROJECT_DIR$/ColorShop/ColorShop.py" />
         <option value="$PROJECT_DIR$/mygame.py" />
         <option value="$PROJECT_DIR$/mydefine.py" />
-        <option value="$PROJECT_DIR$/Logo/Logo.py" />
         <option value="$PROJECT_DIR$/Game/Map/Tiles.py" />
         <option value="$PROJECT_DIR$/Singletons/mysingletons.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py" />
@@ -172,6 +170,7 @@
         <option value="$PROJECT_DIR$/res/userdata/user.txt" />
         <option value="$PROJECT_DIR$/Menu/Menu.py" />
         <option value="$PROJECT_DIR$/Game/Map/Map.py" />
+        <option value="$PROJECT_DIR$/Logo/Logo.py" />
       </list>
     </option>
   </component>
@@ -206,6 +205,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -392,8 +393,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -641,19 +640,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39553753" sideWeight="0.5182292" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39553753" sideWeight="0.5203125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.57395834" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.57135415" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39553753" sideWeight="0.48177084" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39553753" sideWeight="0.4796875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -683,7 +682,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="66" />
+      <option name="time" value="69" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -696,19 +695,11 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-452408018/builtins.py" />
-    <entry file="file://$PROJECT_DIR$/res/mapdata/ch2/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/mapdata/ch2/test.txt" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/genericpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,7 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,7 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logo/Logo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ColorShop/ColorShop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
@@ -845,15 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyUtile/mycoroutine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,33 +904,17 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Map/Tiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game_framework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="1045">
           <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="283" column="40" selection-start-line="283" selection-start-column="18" selection-end-line="283" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Selete/Selete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="3135">
           <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -970,13 +926,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Menu/Menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="133">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -986,7 +941,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Singletons/mysingletons.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
+        <state relative-caret-position="684">
           <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -998,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,15 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,16 +967,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyUtile/mycoroutine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Map/Tiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="33" column="51" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/sdl2/pixels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="258" column="0" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/Map/Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="200" column="75" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
+        <state relative-caret-position="247">
+          <caret line="249" column="37" selection-start-line="241" selection-start-column="11" selection-end-line="249" selection-end-column="37" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logo/Logo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
