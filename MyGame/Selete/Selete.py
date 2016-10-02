@@ -92,7 +92,7 @@ class SeleteMain(Coroutine):
     def __init__(self):
         self.Pop1 = False
         super(SeleteMain, self).__init__()
-        self.NowDraw = 0
+        self.NowDraw = Sing_MapListManager.NowCh
         self.PopUp = False
         self.ChName = ["Nation","Games"]
         self.BackButton = load_image("res/Home.png")
@@ -166,10 +166,11 @@ class SeleteMain(Coroutine):
             if self.PopUp == False and self.Pop1 == False:
                 for i in range(0, self.List[self.NowDraw].ButtonList.__len__()):
                     if self.List[self.NowDraw].ButtonList[i].Coll(event.x, 700 - event.y): # 게임
-                        Sing_MapListManager.NowCh = self.NowDraw
-                        Sing_MapListManager.NowStage = 15 - i
-                        game_framework.push_state(Game.Game)
-                        return
+                        if Sing_MapListManager.GetChClear(self.NowDraw) == 1:
+                            Sing_MapListManager.NowCh = self.NowDraw
+                            Sing_MapListManager.NowStage = 15 - i
+                            game_framework.change_state(Game.Game)
+                            return
                 if self.List[self.NowDraw].Coll(self.List[self.NowDraw].StartX + 150,self.List[self.NowDraw].StartY -100,100,40,event.x,700-event.y ) and self.List[self.NowDraw].Check == 0:
                         self.PopUp = True
                 elif self.Coll(440,650,self.Shop.w/2,self.Shop.h/2,event.x , 700- event.y):
@@ -256,7 +257,6 @@ def exit():
 
 def update(frame_time):
     global  SeleteManager
-
     global FadeinOut
     FadeinOut.Update()
     SeleteManager.Update()

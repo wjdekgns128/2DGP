@@ -122,7 +122,9 @@ class MapManager():
     def GetStage(self,n):
         return self.File_List[n].__len__()
     def GetFileName(self,c,n): # 챕터번호,숫자번호WWWW
-        return self.File_List[c][n].split("res/mapdata\ch" + str(c+1) + "\\")[1]
+        re = self.File_List[c][n].split("res/mapdata\ch" + str(c+1) + "\\")[1]
+        return  re.split('.')[0]
+
     def GetFileData(self,c,n): # n번째에있는 텍스트 파일의 맵번호,클리어 숫자,클리어 색상,각 타일의 색상 리턴
         f = open(self.File_List[c][n])
         mylist = []

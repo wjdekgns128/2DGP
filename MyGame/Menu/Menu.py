@@ -9,7 +9,7 @@ def enter():
     global BackImage
     BackImage = load_image("res/Back.png")
     FadeinOut = FadeInFadeOut()
-
+    Sing_MapListManager.NowCh = 0
 def exit():
     global FadeinOut
     global BackImage
