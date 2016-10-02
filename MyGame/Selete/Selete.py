@@ -90,6 +90,7 @@ class SeeteList:
         return True
 class SeleteMain(Coroutine):
     def __init__(self):
+        self.Pop1 = False
         super(SeleteMain, self).__init__()
         self.NowDraw = 0
         self.PopUp = False
@@ -98,6 +99,8 @@ class SeleteMain(Coroutine):
         self.StartIcon = load_image("res/Star_Icon.png")
         self.Shop = load_image("res/Shop.png")
         self.FageFontText = load_font("res/font/GodoB.ttf", 40)
+        self.FageFontText1 = load_font("res/font/GodoB.ttf", 55)
+
         self.MyFontText = load_font("res/font/GodoB.ttf", 20)
         self.ChImage = [load_image("res/Selete/ch1.png"),load_image("res/Selete/ch2.png")]
         self.FontText = load_font("res/font/GodoB.ttf", 70)
@@ -118,12 +121,14 @@ class SeleteMain(Coroutine):
         del (self.Button)
         del (self.FontText)
         del (self.PopBackImage)
+        del (self.FageFontText1)
     def Update(self):
         self.RunCoroutine()
     def Down(self,c):
         if self.FadeCheck== True:
             return
         self.PopUp = False
+        self.Pop1 = False
         self.FadeCheck = True
         for i in range(0,11):
             s = 1 - (i * 0.1)
@@ -151,9 +156,14 @@ class SeleteMain(Coroutine):
             self.FontText.draw(235, 400, "Buy?")
             for i in range(0, 2):
                 self.Button[i].draw(230 + (i * 140), 280)
+        elif self.Pop1 == True:
+            self.PopBackImage.draw(300, 350, 400, 500)
+            self.FageFontText1.draw(225, 400, "Menu?")
+            for i in range(0, 2):
+                self.Button[i].draw(230 + (i * 140), 280)
     def Event(self,event):
         if (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
-            if self.PopUp == False:
+            if self.PopUp == False and self.Pop1 == False:
                 for i in range(0, self.List[self.NowDraw].ButtonList.__len__()):
                     if self.List[self.NowDraw].ButtonList[i].Coll(event.x, 700 - event.y): # 게임
                         Sing_MapListManager.NowCh = self.NowDraw
@@ -178,7 +188,7 @@ class SeleteMain(Coroutine):
                     self.StartCoroutine(self.Down(1))
 
 
-            else:
+            elif self.PopUp == True:
                 for i in range(0, 2):
                     if self.Coll(230 + (i * 140), 280, 90,90,event.x, 700 - event.y):
                         if i == 0:
@@ -193,7 +203,17 @@ class SeleteMain(Coroutine):
                         else:
                             self.PopUp = False
                             return
-
+            elif self.Pop1 == True:
+                for i in range(0, 2):
+                    if self.Coll(230 + (i * 140), 280, 90, 90, event.x, 700 - event.y):
+                        if i == 0:
+                            # 돈 있는지체크
+                                game_framework.change_state(Menu.Menu)
+                                self.Pop1 = False
+                                return True
+                        else:
+                            self.Pop1 = False
+                            return
         elif(event.type,event.key) == (SDL_KEYDOWN,SDLK_RIGHT):
             if self.NowDraw >= Sing_MapListManager.GetChatper()-1:
                 return
@@ -253,10 +273,11 @@ def handle_events(frame_time):
     events = get_events()
     for event in events:
         if (event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):
-            game_framework.change_state(Menu.Menu)
-            return
+            SeleteManager.Pop1 = not SeleteManager.Pop1
+
         else:
             if SeleteManager.Event(event) == True:
+                events.clear()
                 return
 def pause(): pass
 def resume(): pass

@@ -28,9 +28,12 @@ def handle_events(frame_time):
 
     events = get_events()
     for event in events:
-        if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_ESCAPE):
-            game_framework.pop_state()
-
+        if (event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):
+            GameMapManager.PopUp = not GameMapManager.PopUp
+        else:
+            if(GameMapManager.Event(event) == True):
+                events.clear()
+                game_framework.pop_state()
 
 def pause(): pass
 def resume(): pass
