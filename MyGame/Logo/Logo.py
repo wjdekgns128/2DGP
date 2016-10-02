@@ -39,7 +39,7 @@ class LogoManager(Coroutine):
     def __init__(self):
         self.Now = 0
         self.Back = load_image("res/Back.png")
-        Colors = [SDL_Color(218,51,64),SDL_Color(255,205,0),SDL_Color(40,170,226),SDL_Color(246,233,199)]
+        Colors = [SDL_Color(218,51,64),SDL_Color(255,205,0),SDL_Color(40,170,226),SDL_Color(255,255,255)]
         super(LogoManager,self).__init__()
         self.LogoTile =  [[0 for y in range(12)] for x in range(10)]
         for i in range(0,12):
@@ -53,7 +53,7 @@ class LogoManager(Coroutine):
 
         if(self.LogoTile[x][y].Color != self.LogoTile[x][y].FirstColor):
             self.LogoTile[x][y].ChageColor()
-            yield WaitForSeconds(0.07)
+            yield WaitForSeconds(0.06)
             if x > 0:
                 self.StartCoroutine(self.GoLose(x - 1, y))
             if x < 9:

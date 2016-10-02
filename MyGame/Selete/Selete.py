@@ -6,18 +6,24 @@ from pico2d import *
 import game_framework
 from mydefine import *
 class SeleteButton:
-    def __init__(self,x,y,n,imge):
+    def __init__(self,x,y,n,imge,l):
         self.NowNumber = n
         self.StartX = x
         self.StartY = y
+        self.Nowc = l
         self.CheckImage = imge
         self.StageImage = load_image("res/Selete/StageButton.png")
+        self.StageClearIcon = load_image("res/Selete/CheckIcon.png")
     def Draw(self):
+
         self.StageImage.draw(self.StartX,self.StartY)
         self.CheckImage.draw(self.StartX,self.StartY,50,50)
+        if Sing_MapListManager.ClearNumber[self.Nowc][15 - self.NowNumber] == 1:
+            self.StageClearIcon.draw(self.StartX-20, self.StartY+30,40,40)
     def Down(self,f):
         self.CheckImage.opacify(f)
         self.StageImage.opacify(f)
+        self.StageClearIcon.opacify(f)
     def Coll(self,x1, y1):
         left, bottom, right, top = self.StartX - 27,self.StartY - 27,self.StartX + 27, self.StartY + 27
         left1, bottom1, right1, top1 = x1 - 2, y1 - 2, x1 + 2, y1 + 2
@@ -50,7 +56,7 @@ class SeeteList:
         self.StartY = y
         self.Check = Sing_MapListManager.ClearCh[self.NowCh]
         for i in range(0,Sing_MapListManager.GetStage(self.NowCh)):
-            self.ButtonList.append(SeleteButton(self.StartX +390 - ((i%4) * 70),self.StartY -150 + ((int(i/4)) * 100),15-i,self.CheckImage[Sing_MapListManager.ClearNumber[self.NowCh][i]]))
+            self.ButtonList.append(SeleteButton(self.StartX +390 - ((i%4) * 70),self.StartY -150 + ((int(i/4)) * 100),15-i,self.CheckImage[Sing_MapListManager.ClearNumber[self.NowCh][i]],self.NowCh))
     def Draw(self):
         self.NowImage.draw(self.StartX,self.StartY)
         self.NameImage.draw(self.StartX+10,self.StartY+210)
@@ -92,6 +98,7 @@ class SeleteMain(Coroutine):
     def __init__(self):
         self.Pop1 = False
         super(SeleteMain, self).__init__()
+
         self.NowDraw = Sing_MapListManager.NowCh
         self.PopUp = False
         self.ChName = ["Nation","Games"]
@@ -100,7 +107,8 @@ class SeleteMain(Coroutine):
         self.Shop = load_image("res/Shop.png")
         self.FageFontText = load_font("res/font/GodoB.ttf", 40)
         self.FageFontText1 = load_font("res/font/GodoB.ttf", 55)
-
+        self.StoreButton = load_image("res/StoreButton.png")
+        self.StartButton = load_image("res/StartButton.png")
         self.MyFontText = load_font("res/font/GodoB.ttf", 20)
         self.ChImage = [load_image("res/Selete/ch1.png"),load_image("res/Selete/ch2.png")]
         self.FontText = load_font("res/font/GodoB.ttf", 70)
@@ -111,7 +119,6 @@ class SeleteMain(Coroutine):
             self.List.append(SeeteList(self.ChImage[i],i,160 ,300,self.ChName[i]))
         self.FadeCheck = False
     def __del__(self):
-        del(self.List)
         del(self.ChImage)
         del(self.BackButton)
         del(self.StartIcon)
@@ -122,6 +129,10 @@ class SeleteMain(Coroutine):
         del (self.FontText)
         del (self.PopBackImage)
         del (self.FageFontText1)
+        del (self.List)
+        del (self.StartButton)
+        del (self.StoreButton)
+
     def Update(self):
         self.RunCoroutine()
     def Down(self,c):
@@ -144,11 +155,14 @@ class SeleteMain(Coroutine):
             yield WaitForSeconds(0.02)
         self.FadeCheck = False
     def Draw(self):
-        self.BackButton.draw(530, 650)
+        self.StartButton.draw(542,650)
+        self.BackButton.draw(540, 650)
+        self.StartButton.draw(442,650)
         self.Shop.draw(440,650)
+        self.StoreButton.draw(323,650,150,90)
         self.StartIcon.draw(350, 665, 45, 45)
         self.StartIcon.draw(290, 665, 45, 45)
-        self.MyFontText.draw(270, 625, str(Sing_UserManager.NowMoney), color=(255, 255, 255))
+        self.MyFontText.draw(270, 623, str(Sing_UserManager.NowMoney), color=(255, 255, 255))
         self.List[self.NowDraw].Draw()
         self.FageFontText.draw(260,30,str(self.NowDraw+1)+" / "  + str(Sing_MapListManager.GetChatper()),color= (255,255,255))
         if (self.PopUp == True):
@@ -176,7 +190,7 @@ class SeleteMain(Coroutine):
                 elif self.Coll(440,650,self.Shop.w/2,self.Shop.h/2,event.x , 700- event.y):
                         game_framework.change_state(ColorShop.ColorShop)
                         return True
-                elif self.Coll(530,650,self.BackButton.w/2,self.BackButton.h/2,event.x,700-event.y):
+                elif self.Coll(540,650,self.BackButton.w/2,self.BackButton.h/2,event.x,700-event.y):
                         game_framework.change_state(Menu.Menu)
                         return True
                 elif event.x < 300:

@@ -26,6 +26,8 @@ class Coroutine:
             if (not CorObject.Next()):
                 self.CroList.remove(CorObject)
 
+    def AllStop(self):
+        self.CroList.clear()
 class WaitForSeconds:
     def __init__(self,time):
         self.current = 0

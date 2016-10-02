@@ -24,7 +24,7 @@ class FadeInOutName(Coroutine):
         for i in range(0, 51):
             s = 1 - (i * 0.02)
             self.Back.opacify(s)
-            yield WaitForSeconds(0.01)
+            yield WaitForSeconds(0.015)
 
         self.Ing = False
         self.Check = False
@@ -80,9 +80,7 @@ class Map(Coroutine):
         return True
     def MapSetting(self): # 챕터 스테이지 번호 넘어옴
         self.Fade.Start()
-        if self.Money >= Sing_UserManager.NowMoney:
-            Sing_UserManager.NowMoney = self.Money
-            Sing_UserManager.Save()
+        self.AllStop()
         self.Money = 0
         self.NowPlayMapNumber = Sing_MapListManager.NowStage
         self.NowPlayChNumber = Sing_MapListManager.NowCh
@@ -184,6 +182,9 @@ class Map(Coroutine):
                                         Sing_UserManager.Save()
                                     return True
                                 else:
+                                    if self.Money >= Sing_UserManager.NowMoney:
+                                        Sing_UserManager.NowMoney = self.Money
+                                        Sing_UserManager.Save()
                                     self.MapSetting()
                         elif self.Coll(390, 280, 45, 45, event.x, 700 - event.y): #홈
                             self.PopUp = True
@@ -194,6 +195,8 @@ class Map(Coroutine):
                                 if self.Money >= Sing_UserManager.NowMoney:
                                     Sing_UserManager.NowMoney = self.Money
                                     Sing_UserManager.Save()
+                                    print("Dasdsa")
+
                                 return True
 
                             self.PopUp = False
@@ -263,10 +266,10 @@ class Map(Coroutine):
             Sing_MapListManager.ClearNumber[Sing_MapListManager.NowCh][15 - Sing_MapListManager.NowStage] = 1
             Sing_MapListManager.Save(Sing_MapListManager.NowCh)
     def UpMoney(self):
-        self.Money = Sing_UserManager.NowMoney + 200
+        self.Money = Sing_UserManager.NowMoney + 400
         for i in range(0,50):
-            Sing_UserManager.NowMoney += 4
-            yield WaitForSeconds(0.015)
+            Sing_UserManager.NowMoney += 8
+            yield WaitForSeconds(0.01)
 
 
     def ClearGameCheck(self): # 1클리어 , 2 낫클리어 ,0 기본

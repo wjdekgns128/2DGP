@@ -96,7 +96,8 @@ class ColorShopMain:
         self.PopUp = False
         self.NowNumber = 0
 
-
+        self.StoreButton = load_image("res/StoreButton.png")
+        self.StartButton = load_image("res/StartButton.png")
         self.BackButton = load_image("res/Home.png")
         self.StartIcon = load_image("res/Star_Icon.png")
         self.MyFontText = load_font("res/font/GodoB.ttf", 20)
@@ -121,15 +122,17 @@ class ColorShopMain:
         del (self.Button)
         del (self.FontText)
         del(self.PopBackImage)
-        del(  self.namelmage)
+        del( self.namelmage)
         del(self.BackImage )
     def Draw(self):
         self.BackImage.draw(300, 350)
+        self.StartButton.draw(551, 650)
         self.BackButton.draw(550,650)
+        self.StoreButton.draw(430, 650, 150, 90)
         self.StartIcon.draw(460,665,45,45)
         self.StartIcon.draw(400,665,45,45)
 
-        self.MyFontText.draw(380,625,str(Sing_UserManager.NowMoney),color = (255,255,255))
+        self.MyFontText.draw(380,622,str(Sing_UserManager.NowMoney),color = (255,255,255))
         for i in range(0, self.Count):
             self.ColorLists[i].Draw()
         if (self.PopUp == True):
