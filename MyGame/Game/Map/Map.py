@@ -10,6 +10,8 @@ class FadeInOutName(Coroutine):
         self.Check = False
 
     def __del__(self):
+        self.AllStop()
+
         del(self.FontText)
         del(self.Back)
     def Start(self):
@@ -53,6 +55,8 @@ class Map(Coroutine):
         self.Icon = load_image("res/Star_Icon.png")
         self.Money = 0
     def __del__(self):
+        self.AllStop()
+
         del(self.PlayGameimage)
         del(self.ClearColorImage)
         del(self.Back)

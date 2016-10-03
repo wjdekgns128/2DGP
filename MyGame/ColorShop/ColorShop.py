@@ -1,6 +1,8 @@
 from pico2d import *
 import game_framework
 import Selete.Selete
+import Menu.Menu
+import mydefine
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 class ColorShopList:
@@ -114,6 +116,8 @@ class ColorShopMain:
         self.namelmage = load_image("res/ColorShop_Logo.png")
         self.BackImage = load_image("res/Back.png")
     def __del__(self):
+        self.AllStop()
+
         del(self.ColorLists)
 
         del(self.BackButton)
@@ -158,9 +162,14 @@ class ColorShopMain:
 
     def Mouse(self,event):
 
+
         if(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
             if self.Coll(550,650,event.x,700-event.y):
-                game_framework.change_state(Selete.Selete)
+                if Sing_ColorLisManager.ChageColorShopNumber == 0:
+                    game_framework.change_state(Menu.Menu)
+                else:
+                    game_framework.change_state(Selete.Selete)
+
                 return True
             elif self.PopUp == False:
                 for i in range(0, self.Count):
@@ -263,7 +272,10 @@ def handle_events(frame_time):
     for event in events:
         if (event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):
             if ColorManager.PopUp == False:
-                game_framework.change_state(Selete.Selete)
+                if Sing_ColorLisManager.ChageColorShopNumber == 0:
+                    game_framework.change_state(Menu.Menu)
+                else:
+                    game_framework.change_state(Selete.Selete)
                 events.clear()
                 return
             else:

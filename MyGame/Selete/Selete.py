@@ -119,6 +119,8 @@ class SeleteMain(Coroutine):
             self.List.append(SeeteList(self.ChImage[i],i,160 ,300,self.ChName[i]))
         self.FadeCheck = False
     def __del__(self):
+        self.AllStop()
+
         del(self.ChImage)
         del(self.BackButton)
         del(self.StartIcon)
@@ -176,6 +178,7 @@ class SeleteMain(Coroutine):
             for i in range(0, 2):
                 self.Button[i].draw(230 + (i * 140), 280)
     def Event(self,event):
+
         if (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
             if self.PopUp == False and self.Pop1 == False:
                 for i in range(0, self.List[self.NowDraw].ButtonList.__len__()):
@@ -188,6 +191,7 @@ class SeleteMain(Coroutine):
                 if self.List[self.NowDraw].Coll(self.List[self.NowDraw].StartX + 150,self.List[self.NowDraw].StartY -100,100,40,event.x,700-event.y ) and self.List[self.NowDraw].Check == 0:
                         self.PopUp = True
                 elif self.Coll(440,650,self.Shop.w/2,self.Shop.h/2,event.x , 700- event.y):
+                        Sing_ColorLisManager.ChageColorShopNumber = 1
                         game_framework.change_state(ColorShop.ColorShop)
                         return True
                 elif self.Coll(540,650,self.BackButton.w/2,self.BackButton.h/2,event.x,700-event.y):

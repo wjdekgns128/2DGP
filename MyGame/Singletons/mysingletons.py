@@ -142,6 +142,7 @@ class MapManager():
         return maptype,count,clear,mylist
 class ColorManager():
     def __init__(self):
+        self.ChageColorShopNumber = 0
         self.colorListName = ['color1', 'color2', 'color3', 'color4', 'color5']
         self.MaxNumber = 0
 

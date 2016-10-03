@@ -16,7 +16,9 @@ class LogoObject(Coroutine):
         self.P = True
         self.Image1 = load_image("res/6x8.png")
     def __del__(self):
+        self.AllStop()
         del(self.Image1)
+
     def Draw(self):
         self.Image1.drawRGB(self.StartX,self.StartY,self.FirstColor,self.W,self.H)
     def Update(self):
