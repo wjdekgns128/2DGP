@@ -178,7 +178,6 @@ class SeleteMain(Coroutine):
             for i in range(0, 2):
                 self.Button[i].draw(230 + (i * 140), 280)
     def Event(self,event):
-
         if (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
             if self.PopUp == False and self.Pop1 == False:
                 for i in range(0, self.List[self.NowDraw].ButtonList.__len__()):

@@ -116,8 +116,6 @@ class ColorShopMain:
         self.namelmage = load_image("res/ColorShop_Logo.png")
         self.BackImage = load_image("res/Back.png")
     def __del__(self):
-        self.AllStop()
-
         del(self.ColorLists)
 
         del(self.BackButton)
