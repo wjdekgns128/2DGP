@@ -6,37 +6,41 @@ import mydefine
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 class ColorShopList:
+    BackImage  = None
+    FontText = None
+    FontText1 = None
+    BuyImage = None
+    ColorImage = None
+
     def __init__(self,x,y,n): # x,y,칼라 넘버
-        self.BackImage = load_image("res/Block_Image.png")
-        self.FontText = load_font("res/font/GodoB.ttf",30)
-        self.FontText1 = load_font("res/font/GodoB.ttf",22)
-        self.BuyImage = [load_image("res/Star_Icon.png"),load_image("res/Tick.png"),load_image("res/Tick_Click.png")]
+        if(ColorShopList.BackImage == None ):
+            ColorShopList.BackImage = load_image("res/Block_Image.png")
+        if ColorShopList.FontText == None:
+            ColorShopList.FontText = load_font("res/font/GodoB.ttf",30)
+        if ColorShopList.FontText1 == None:
+            ColorShopList.FontText1 = load_font("res/font/GodoB.ttf",22)
+        if ColorShopList.BuyImage == None:
+            ColorShopList.BuyImage = [load_image("res/Star_Icon.png"),load_image("res/Tick.png"),load_image("res/Tick_Click.png")]
         self.x = x
         self.y = y
         self.Number = n
         self.Name = Sing_ColorLisManager.GetColorName(n)
         self.Money = Sing_ColorLisManager.GetColorMoney(n)
         self.ColorList = Sing_ColorLisManager.GetColorAll(n)
-
-        self.ColorImage = load_image("res/6x8.png")
+        if ColorShopList.ColorImage == None:
+            ColorShopList.ColorImage = load_image("res/6x8.png")
         self.state = BUY  #사야되는 상황 # 가지고있는상황, # 장착중인 상황 BUY,GET,SELETE
-    def __del__(self):
-        del(self.ColorImage)
-        del(self.BackImage)
-        del(self.FontText)
-        del(self.FontText1)
-        del(self.BuyImage)
     def Draw(self):
         if( self.y < 550):
-            self.BackImage.draw(self.x + 130, self.y)
+            ColorShopList.BackImage.draw(self.x + 130, self.y)
             for i in range(0,self.ColorList.__len__()):
-                self.ColorImage.drawRGB(self.x+ (65 * i),self.y,self.ColorList[i],65,65)
-            self.FontText.draw(self.x-27,self.y+50,self.Name,color = (255,255,255))
-            self.BuyImage[self.state].draw(self.x+340,self.y+5)
+                ColorShopList.ColorImage.drawRGB(self.x+ (65 * i),self.y,self.ColorList[i],65,65)
+            ColorShopList.FontText.draw(self.x-27,self.y+50,self.Name,color = (255,255,255))
+            ColorShopList.BuyImage[self.state].draw(self.x+340,self.y+5)
             if self.state == BUY:
-                self.FontText1.draw(self.x+315,self.y+2,self.Money)
+                ColorShopList.FontText1.draw(self.x+315,self.y+2,self.Money)
             else:
-                self.BuyImage[0].draw(self.x+290,self.y+35,25,25)
+                ColorShopList.BuyImage[0].draw(self.x+290,self.y+35,25,25)
     def Setting(self,y):
         self.y += y
     def SetBuy(self):

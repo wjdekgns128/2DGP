@@ -5,6 +5,8 @@ from pico2d import *
 from MyUtile.mycoroutine import *
 
 class Tiles(Coroutine):
+
+    SeleteDraw = None
     def __init__(self,n,x,y,type,c):
         super(Tiles,self).__init__()
         Tilet = ["res/6x8_click.png","res/8x10.click.png","res/10x12_click.png"]
@@ -12,16 +14,17 @@ class Tiles(Coroutine):
         self.StartY = y
         self.Type = type
         self.FirstType = type
-        self.drawimage = load_image(n)
-        self.SeleteDraw = load_image(Tilet[c])
+        self.DrawImage = load_image(n)
+        if Tiles.SeleteDraw == None:
+            Tiles.SeleteDraw = load_image(Tilet[c])
 
-        self.SizeW = self.drawimage.w
-        self.SizeH = self.drawimage.h
+        self.SizeW = self.DrawImage.w
+        self.SizeH = self.DrawImage.h
         self.ClickCheck = False
         self.ChageColor(type)
         self.ChageCheck = False
     def __del__(self):
-        del (self.drawimage)
+        del self.DrawImage
     def ToReturnGame(self): #게임 재시작시 리턴 컬러
         self.Type = self.FirstType
         self.ChageColor(self.Type)
@@ -39,9 +42,9 @@ class Tiles(Coroutine):
     def ClickUp(self):
         self.ClickCheck = False
     def Draw(self):
-        self.drawimage.drawRGB(self.StartX,self.StartY,self.MyColor,self.SizeW,self.SizeH)
+        self.DrawImage.drawRGB(self.StartX,self.StartY,self.MyColor,self.SizeW,self.SizeH)
         if self.ClickCheck:
-            self.SeleteDraw.draw(self.StartX,self.StartY)
+            Tiles.SeleteDraw.draw(self.StartX,self.StartY)
     def Update(self):
         self.RunCoroutine()
     # 코루틴함수들....

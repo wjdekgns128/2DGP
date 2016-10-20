@@ -6,24 +6,27 @@ from pico2d import *
 import game_framework
 from mydefine import *
 class SeleteButton:
+    StageImage = None
+    StageClearIcon = None
     def __init__(self,x,y,n,imge,l):
         self.NowNumber = n
         self.StartX = x
         self.StartY = y
         self.Nowc = l
         self.CheckImage = imge
-        self.StageImage = load_image("res/Selete/StageButton.png")
-        self.StageClearIcon = load_image("res/Selete/CheckIcon.png")
+        if SeleteButton.StageImage == None:
+            SeleteButton.StageImage = load_image("res/Selete/StageButton.png")
+        if SeleteButton.StageClearIcon == None:
+            SeleteButton.StageClearIcon = load_image("res/Selete/CheckIcon.png")
     def Draw(self):
-
-        self.StageImage.draw(self.StartX,self.StartY)
+        SeleteButton.StageImage.draw(self.StartX,self.StartY)
         self.CheckImage.draw(self.StartX,self.StartY,50,50)
         if Sing_MapListManager.ClearNumber[self.Nowc][15 - self.NowNumber] == 1:
-            self.StageClearIcon.draw(self.StartX-20, self.StartY+30,40,40)
+            SeleteButton.StageClearIcon.draw(self.StartX-20, self.StartY+30,40,40)
     def Down(self,f):
         self.CheckImage.opacify(f)
-        self.StageImage.opacify(f)
-        self.StageClearIcon.opacify(f)
+        SeleteButton.StageImage.opacify(f)
+        SeleteButton.StageClearIcon.opacify(f)
     def Coll(self,x1, y1):
         left, bottom, right, top = self.StartX - 27,self.StartY - 27,self.StartX + 27, self.StartY + 27
         left1, bottom1, right1, top1 = x1 - 2, y1 - 2, x1 + 2, y1 + 2

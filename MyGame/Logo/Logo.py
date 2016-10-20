@@ -5,6 +5,7 @@ from MyUtile.mycoroutine import *
 from mydefine import *
 # 60 70
 class LogoObject(Coroutine):
+    image = None
     def __init__(self,x,y,n,n1):
         super(LogoObject,self).__init__()
         self.StartX = x
@@ -14,13 +15,13 @@ class LogoObject(Coroutine):
         self.H = 75
         self.FirstColor = n
         self.P = True
-        self.Image1 = load_image("res/6x8.png")
+        if LogoObject.image == None:
+            LogoObject.image = load_image("res/6x8.png")
     def __del__(self):
         self.AllStop()
-        del(self.Image1)
 
     def Draw(self):
-        self.Image1.drawRGB(self.StartX,self.StartY,self.FirstColor,self.W,self.H)
+        LogoObject.image.drawRGB(self.StartX,self.StartY,self.FirstColor,self.W,self.H)
     def Update(self):
         self.RunCoroutine()
     def ChageColor(self,n = 1):
@@ -76,6 +77,7 @@ class LogoManager(Coroutine):
     def __del__(self):
         del(self.Back)
         del(self.LogoTile)
+        del LogoObject.image
     def CheckColor(self,x,y):
         if (x,y) == (0,1) or (x,y) == (3,1) or (x,y) == (0,2) or (x,y) == (2,2) or (x,y) == (0,3) or(x,y) == (1,3) or (x,y) == (0,4) or (x,y) == (2,4) or (x,y) == (0,5) or (x,y) == (3,5):
             return 0

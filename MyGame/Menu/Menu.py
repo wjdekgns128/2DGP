@@ -1,18 +1,23 @@
 from collections import Coroutine
-
+from Game.Particle import *
 from pico2d import *
 import game_framework
 import Selete.Selete
 import ColorShop
+from Game.Particle.Particle import *
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 def enter():
     print("메뉴")
     global  FadeinOut
     global Menu
+    global ParticleB
+    ParticleB = []
     Menu = MenuManager()
     FadeinOut = FadeInFadeOut()
     Sing_MapListManager.NowCh = 0
+    for i in range(0,4):
+        ParticleB.append(Particle())
 def exit():
     global FadeinOut
     global Menu
@@ -22,26 +27,36 @@ def exit():
 
 def update(frame_time):
     global Menu
+    global ParticleB
 
     FadeinOut.Update()
+    for i in range(0, 4):
+        ParticleB[i].Update()
     Menu.Update()
 def draw(frame_time):
     global FadeinOut
     global Menu
+    global ParticleB
 
     # fill here
     clear_canvas()
     Menu.Draw()
+    for i in range(0, 4):
+        ParticleB[i].Draw()
     FadeinOut.Draw()
     update_canvas()
 
 def handle_events(frame_time):
     global Menu
+    global ParticleB
 
     events = get_events()
     for event in events:
         if(event.type,event.key)  == (SDL_KEYDOWN,SDLK_ESCAPE):
             Menu.PopUp = not Menu.PopUp
+        if (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
+            for i in range(0, 4):
+                ParticleB[i].ReSetting(i)
         else:
             check = Menu.Event(event)
             if(check == 1):
