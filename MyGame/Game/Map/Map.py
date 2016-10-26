@@ -2,7 +2,7 @@ import game_framework
 from Game.Map import Tiles
 from Game.Map.Tiles import *
 from mydefine import *
-
+from Game.Particle.Particle import *
 class FadeInOutName(Coroutine):
     def __init__(self):
         super(FadeInOutName,self).__init__()
@@ -39,6 +39,9 @@ class FadeInOutName(Coroutine):
 class Map(Coroutine):
     def __init__(self):
         super(Map,self).__init__()
+        self.ParticleB = []
+        for i in range(0, 4):
+            self.ParticleB.append(Particle())
         self.Fade = FadeInOutName()
         self.Home = load_image("res/Home.png")
         self.Retry = load_image("Res/Retry.png")
@@ -56,7 +59,7 @@ class Map(Coroutine):
         self.Money = 0
     def __del__(self):
         self.AllStop()
-
+        del (self.ParticleB)
         del(self.PlayGameimage)
         del(self.ClearColorImage)
         del(self.Back)
@@ -144,11 +147,15 @@ class Map(Coroutine):
                 self.Button[i].draw(230 + (i * 140), 280)
         if self.Fade.Ing == True:
             self.Fade.Draw()
+        for i in range(0, 4):
+            self.ParticleB[i].Draw()
     def Update(self):
         if self.Fade.Ing == False:
             for y in range(0, self.MapCount[1]):
                 for x in range(0, self.MapCount[0]):
                     self.MapTiles[x][y].Update()
+            for i in range(0, 4):
+                self.ParticleB[i].Update()
             self.RunCoroutine()
         else:
             self.Fade.Update()
@@ -267,6 +274,8 @@ class Map(Coroutine):
         if(self.GameOverCheck == 1):
             if Sing_MapListManager.ClearNumber[Sing_MapListManager.NowCh][15-Sing_MapListManager.NowStage] != 1:
                 self.StartCoroutine(self.UpMoney())
+            for i in range(0, 4):
+                self.ParticleB[i].ReSetting(i)
             Sing_MapListManager.ClearNumber[Sing_MapListManager.NowCh][15 - Sing_MapListManager.NowStage] = 1
             Sing_MapListManager.Save(Sing_MapListManager.NowCh)
     def UpMoney(self):
