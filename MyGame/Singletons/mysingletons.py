@@ -81,6 +81,7 @@ class MapManager():
         for i in range(0, self.Dir_List.__len__()):
             Temp = (glob.glob(self.Dir_List[i] + "/*.txt"))
             self.File_List.append(Temp)
+        print(self.File_List)
         for i in range(0, self.Dir_List.__len__()):
             Temp = []
             for j in range(0,self.File_List[i].__len__()):
