@@ -56,3 +56,5 @@ class Particle:
         for i in range(0, self.ObjectList.__len__()):
             if(self.ObjectList[i].GetOp() > 0):
                 self.ObjectList[i].Update()
+    def ChageSetting(self):
+        self.ObjectList.clear()

@@ -86,6 +86,8 @@ class Map(Coroutine):
             return False
         return True
     def MapSetting(self): # 챕터 스테이지 번호 넘어옴
+
+
         self.Fade.Start()
         self.AllStop()
         self.Money = 0
@@ -103,7 +105,10 @@ class Map(Coroutine):
         self.ClickX = 0
         self.ClickY = 0
         self.GameOverCheck = 0
+        for i in range(0, 4):
+                self.ParticleB[i].ChageSetting()
         self.MapTiles = None
+
         if self.MapTiles != None:
             del (self.MapTiles)
             self.MapTiles = None

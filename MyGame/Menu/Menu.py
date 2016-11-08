@@ -77,7 +77,7 @@ class MenuManager(Coroutine):
         self.CloseGame = load_image("res/close_game.png")
         self.FontText = load_font("res/font/GodoB.ttf", 70)
         self.FontText1 = load_font("res/font/GodoB.ttf", 25)
-
+        self.TitLogo = load_image("res/Title_Logo.png")
         self.Button = [load_image("res/okbutton.png"), load_image("res/nobutton.png")]
         self.PopBackImage = load_image("res/Block_Image.png")
 
@@ -85,6 +85,9 @@ class MenuManager(Coroutine):
         self.StartCoroutine(self.SizeofDown())
         self.Wsize = 0
         self.Hsize = 0
+        self.ColorCheck = True
+        self.ListColorR = [255,255,255]
+        self.ListCOlorNumber = 0
     def SizeofDown(self):
         for i in range(0,6):
             self.Wsize += 1
@@ -114,9 +117,21 @@ class MenuManager(Coroutine):
         del self.FontText
         del self.PopBackImage
     def Update(self):
+        if self.ColorCheck == True:
+            self.ListColorR[self.ListCOlorNumber ] -=1
+        else:
+            self.ListColorR[self.ListCOlorNumber]+=1
+        if(   self.ListColorR[self.ListCOlorNumber ] <= 130):
+            self.ColorCheck = False
+            self.ListCOlorNumber = randint(0,2)
+        if(   self.ListColorR[self.ListCOlorNumber ] >= 255):
+            self.ColorCheck = True
+            self.ListCOlorNumber = randint(0,2)
+
         self.RunCoroutine()
     def Draw(self):
         self.BackImage.draw(300, 350)
+        self.TitLogo.drawRGB(300,585,SDL_Color(self.ListColorR[0],self.ListColorR[1],self.ListColorR[2]),640,200)
 
         self.StarIconBack.draw(235,440,140,140)
         self.StarIcon.draw(235,455,75,75)
