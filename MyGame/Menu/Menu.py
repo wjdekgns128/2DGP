@@ -7,14 +7,23 @@ import ColorShop
 from Game.Particle.Particle import *
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
+sound = None
 def enter():
     print("메뉴")
     global  FadeinOut
     global Menu
-
+    global sound
+    global time
+    time = 0
+    if sound== None:
+        sound = load_music("res/sound/BGM/BGM.mp3")
+        sound.repeat_play()
+        sound.set_volume(0)
     Menu = MenuManager()
     FadeinOut = FadeInFadeOut()
     Sing_MapListManager.NowCh = 0
+
+
 
 def exit():
     global FadeinOut
@@ -25,7 +34,14 @@ def exit():
 
 def update(frame_time):
     global Menu
-
+    global sound
+    global time
+    time += frame_time
+    if sound != None:
+        if sound.get_volume() < 60:
+            if time > 0.05:
+                sound.set_volume(sound.get_volume() +1)
+                time  = 0
     FadeinOut.Update()
 
     Menu.Update()
@@ -42,6 +58,7 @@ def draw(frame_time):
 
 def handle_events(frame_time):
     global Menu
+    global sound
 
     events = get_events()
     for event in events:
@@ -51,7 +68,10 @@ def handle_events(frame_time):
             check = Menu.Event(event)
             if(check == 1):
                 events.clear()
+                del sound
+                sound = None
                 game_framework.quit()
+
             elif check == 2:
                 events.clear()
                 game_framework.change_state(Selete.Selete)

@@ -40,6 +40,8 @@ class LogoObject(Coroutine):
             self.H -= 1
 class LogoManager(Coroutine):
     def __init__(self):
+
+
         self.Now = 0
         self.Back = load_image("res/Back.png")
         Colors = [SDL_Color(218,51,64),SDL_Color(255,205,0),SDL_Color(40,170,226),SDL_Color(255,255,255)]
@@ -50,13 +52,14 @@ class LogoManager(Coroutine):
                 self.LogoTile[j][i] = LogoObject(30 + (j *60),665 - (i * 70),SDL_Color(0,0,0),Colors[self.CheckColor(j,i)])
         self.StartCoroutine(self.StartLogo())
     def StartLogo(self):
-        yield WaitForSeconds(0.2)
+        yield WaitForSeconds(0.4)
         self.StartCoroutine(self.GoLose(0,0))
     def GoLose(self,x,y):
-
         if(self.LogoTile[x][y].Color != self.LogoTile[x][y].FirstColor):
+
+
             self.LogoTile[x][y].ChageColor()
-            yield WaitForSeconds(0.06)
+            yield WaitForSeconds(0.035)
             if x > 0:
                 self.StartCoroutine(self.GoLose(x - 1, y))
             if x < 9:
@@ -72,8 +75,9 @@ class LogoManager(Coroutine):
                     for j in range(0, 10):
                         self.LogoTile[j][i].ChageColor()
                 self.Now = 0
-                yield WaitForSeconds(0.65)
+                yield WaitForSeconds(0.7)
                 game_framework.change_state(Menu.Menu)
+
     def __del__(self):
         del(self.Back)
         del(self.LogoTile)
@@ -100,17 +104,38 @@ class LogoManager(Coroutine):
                 self.LogoTile[j][i].Update()
 
 
+
 def enter():
+
     open_canvas(600, 700, sync=True)
     global Manager
+    global sound
+    global time
+    time = 0
+    sound = load_wav("res/sound/Button/Logo_Effect.wav")
+    sound.set_volume(100)
+    sound.play()
     Manager = LogoManager()
 def exit():
     global Manager
+    global sound
+
     del(Manager)
+    del (sound)
 
 def update(frame_time):
     global Manager
+    global sound
+    global time
+    time += frame_time
+    if sound != None:
+        if sound.get_volume()  > 0:
+            if time > 0.05:
+                sound.set_volume(sound.get_volume() - 1)
+                time = 0
+
     Manager.Update()
+
 
 def draw(frame_time):
     # fill here
