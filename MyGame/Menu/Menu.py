@@ -38,7 +38,7 @@ def update(frame_time):
     global time
     time += frame_time
     if sound != None:
-        if sound.get_volume() < 60:
+        if sound.get_volume() < 80:
             if time > 0.05:
                 sound.set_volume(sound.get_volume() +1)
                 time  = 0
