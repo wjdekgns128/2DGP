@@ -8,17 +8,22 @@ from Game.Particle.Particle import *
 from MyUtile.myfadeinfadeout import *
 from mydefine import *
 sound = None
+effsound = None
 def enter():
     print("메뉴")
     global  FadeinOut
     global Menu
     global sound
     global time
+    global effsound
+
     time = 0
     if sound== None:
         sound = load_music("res/sound/BGM/BGM.mp3")
         sound.repeat_play()
         sound.set_volume(0)
+    if effsound == None:
+        effsound = load_wav('res/sound/Button/ButtonDown.wav')
     Menu = MenuManager()
     FadeinOut = FadeInFadeOut()
     Sing_MapListManager.NowCh = 0
@@ -38,7 +43,7 @@ def update(frame_time):
     global time
     time += frame_time
     if sound != None:
-        if sound.get_volume() < 80:
+        if sound.get_volume() < 75:
             if time > 0.05:
                 sound.set_volume(sound.get_volume() +1)
                 time  = 0
@@ -59,6 +64,7 @@ def draw(frame_time):
 def handle_events(frame_time):
     global Menu
     global sound
+    global effsound
 
     events = get_events()
     for event in events:
@@ -70,12 +76,18 @@ def handle_events(frame_time):
                 events.clear()
                 del sound
                 sound = None
+                del effsound
+                effsound = None
                 game_framework.quit()
 
             elif check == 2:
+                sound.set_volume(75)
+                effsound.play()
                 events.clear()
                 game_framework.change_state(Selete.Selete)
             elif check == 3:
+                sound.set_volume(75)
+                effsound.play()
                 events.clear()
                 Sing_ColorLisManager.ChageColorShopNumber = 0
                 game_framework.change_state(ColorShop.ColorShop)
@@ -195,6 +207,7 @@ class MenuManager(Coroutine):
                 for i in range(0, 2):
                     if (self.Coll(230 + (i * 140), 280,self.Button[i].w/2,self.Button[i].h/2, event.x, 700 - event.y)):
                         self.PopUp = False
+                        effsound.play()
                         if i == 0:
                             return 1
                         break

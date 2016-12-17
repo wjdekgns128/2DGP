@@ -9,6 +9,7 @@ class Tiles(Coroutine):
     SeleteDraw = None
     def __init__(self,n,x,y,type,c):
         super(Tiles,self).__init__()
+
         Tilet = ["res/6x8_click.png","res/8x10.click.png","res/10x12_click.png"]
         self.StartX = x
         self.StartY = y

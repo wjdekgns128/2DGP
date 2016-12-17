@@ -38,6 +38,7 @@ class FadeInOutName(Coroutine):
             self.FontText.draw(280 - ((self.Name.__len__()-1)*20),380,self.Name,color = (255,255,255))
 class Map(Coroutine):
     def __init__(self):
+
         super(Map,self).__init__()
         self.ParticleB = []
         for i in range(0, 4):
@@ -57,6 +58,19 @@ class Map(Coroutine):
         self.PlayGameimage = load_image("res/Play_game.png")
         self.Icon = load_image("res/Star_Icon.png")
         self.Money = 0
+        Map.effsound = None
+        if Map.effsound == None:
+            Map.effsound = load_wav('res/sound/Button/ButtonDown.wav')
+        Map.effsound1 = None
+        if Map.effsound1 == None:
+            Map.effsound1 = load_wav('res/sound/Button/InGameStageClear.wav')
+        Map.effsound2 = None
+        if Map.effsound2 == None:
+            Map.effsound2 = load_wav('res/sound/Button/InGameStageFail.wav')
+
+        Map.effsound3 = None
+        if Map.effsound3 == None:
+            Map.effsound3 = load_wav('res/sound/Button/InGameBoomTile.wav')
     def __del__(self):
         self.AllStop()
         del (self.ParticleB)
@@ -169,11 +183,14 @@ class Map(Coroutine):
             return
         if (event.type, event.button) == (SDL_MOUSEBUTTONDOWN, SDL_BUTTON_LEFT):
                 if self.PopUp == False:
+
                     if self.GameOverCheck == 0:
                         if self.Coll(515,650,25,25,event.x,700-event.y):
+                            Map.effsound.play()
                             self.PopUp = True
                             return False
                         elif self.Coll(455,650,25,25,event.x,700-event.y):
+                            Map.effsound.play()
                             self.MapSetting();
                             return False
                         else:
@@ -182,12 +199,14 @@ class Map(Coroutine):
                                     if self.MapTiles[x][y].Coll(event.x,700-event.y):
                                         self.Chage = self.MapTiles[x][y].Type
                                         if(not self.MapTiles[x][y].Type == 0 and self.DownButton== False):
+                                            Map.effsound.play()
                                             self.MapTiles[x][y].ClickDown()
                                             self.ClickX= x
                                             self.ClickY = y
                                         return  False
                     else:
                         if self.Coll(210, 280, 45, 45, event.x, 700 - event.y):
+                            Map.effsound.play()
                             if self.GameOverCheck == 2:
                                 self.MapSetting()
                             elif self.GameOverCheck == 1:
@@ -203,15 +222,17 @@ class Map(Coroutine):
                                         Sing_UserManager.Save()
                                     self.MapSetting()
                         elif self.Coll(390, 280, 45, 45, event.x, 700 - event.y): #홈
+                            Map.effsound.play()
                             self.PopUp = True
                 else:
                     for i in range(0, 2):
                         if self.Coll(230 + (i * 140), 280,45,45, event.x, 700 - event.y):
+                            Map.effsound.play()
                             if i == 0:
                                 if self.Money >= Sing_UserManager.NowMoney:
                                     Sing_UserManager.NowMoney = self.Money
                                     Sing_UserManager.Save()
-                                    print("Dasdsa")
+
 
                                 return True
 
@@ -223,6 +244,9 @@ class Map(Coroutine):
                 for y in range(0, self.MapCount[1]):
                     for x in range(0, self.MapCount[0]):
                         if self.MapTiles[x][y].Coll(event.x, 700 - event.y):
+                            if self.GameOverCheck == 0:
+                                Map.effsound3.play()
+
                             self.ChageColor(x,y,self.Chage,self.MapTiles[x][y].Type)
                             break
         return False
@@ -294,11 +318,18 @@ class Map(Coroutine):
         Check = self.Clear()
         if Check:
             if self.ClearCount >= 0:
+                Map.effsound1.set_volume(128)
+                Map.effsound1.play()
                 return 1
             else:
+                Map.effsound2.set_volume(128)
+
+                Map.effsound2.play()
                 return 2
         else:
             if self.ClearCount <= 0:
+                Map.effsound2.set_volume(128)
+                Map.effsound2.play()
                 return 2
             else:
                 return 0

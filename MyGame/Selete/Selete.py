@@ -1,5 +1,8 @@
+from tkinter import Menu
+
 import ColorShop.ColorShop
 import Menu.Menu
+
 import Game.Game
 from MyUtile.myfadeinfadeout import *
 from pico2d import *
@@ -43,7 +46,6 @@ class SeeteList:
     def __init__(self,image,n,x,y,naem):
         self.MyFontText = load_font("res/font/GodoB.ttf", 40)
         self.MyFontText1 = load_font("res/font/GodoB.ttf", 50)
-
         self.ButtonList = []
         self.NowImage = image
         self.Name = naem
@@ -146,6 +148,7 @@ class SeleteMain(Coroutine):
         self.PopUp = False
         self.Pop1 = False
         self.FadeCheck = True
+        effsound.play()
         for i in range(0,11):
             s = 1 - (i * 0.1)
             self.List[self.NowDraw].Down(s)
@@ -188,15 +191,19 @@ class SeleteMain(Coroutine):
                         if Sing_MapListManager.GetChClear(self.NowDraw) == 1:
                             Sing_MapListManager.NowCh = self.NowDraw
                             Sing_MapListManager.NowStage = 15 - i
+                            effsound.play()
+
                             game_framework.change_state(Game.Game)
                             return
                 if self.List[self.NowDraw].Coll(self.List[self.NowDraw].StartX + 150,self.List[self.NowDraw].StartY -100,100,40,event.x,700-event.y ) and self.List[self.NowDraw].Check == 0:
                         self.PopUp = True
                 elif self.Coll(440,650,self.Shop.w/2,self.Shop.h/2,event.x , 700- event.y):
+                        effsound.play()
                         Sing_ColorLisManager.ChageColorShopNumber = 1
                         game_framework.change_state(ColorShop.ColorShop)
                         return True
                 elif self.Coll(540,650,self.BackButton.w/2,self.BackButton.h/2,event.x,700-event.y):
+                        effsound.play()
                         game_framework.change_state(Menu.Menu)
                         return True
                 elif event.x < 300:
@@ -212,6 +219,7 @@ class SeleteMain(Coroutine):
             elif self.PopUp == True:
                 for i in range(0, 2):
                     if self.Coll(230 + (i * 140), 280, 90,90,event.x, 700 - event.y):
+                        effsound.play()
                         if i == 0:
                             #돈 있는지체크
                             if Sing_UserManager.NowMoney >= 2000:
@@ -227,6 +235,7 @@ class SeleteMain(Coroutine):
             elif self.Pop1 == True:
                 for i in range(0, 2):
                     if self.Coll(230 + (i * 140), 280, 90, 90, event.x, 700 - event.y):
+                        effsound.play()
                         if i == 0:
                             # 돈 있는지체크
                                 game_framework.change_state(Menu.Menu)
@@ -256,14 +265,18 @@ class SeleteMain(Coroutine):
         if bottom > top1:
             return False
         return True
+
+effsound = None
 def enter():
     print("선택창")
     global  FadeinOut
     global  SeleteManager
     global BackImage
     global check
-
+    global effsound
     SeleteManager = SeleteMain()
+    if effsound == None:
+        effsound = load_wav('res/sound/Button/ButtonDown.wav')
     check = True
     BackImage = load_image("res/Back.png")
     FadeinOut = FadeInFadeOut()

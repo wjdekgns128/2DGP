@@ -94,6 +94,7 @@ class ColorShopMain:
             return False
         return True
     def __init__(self):
+        self.soundcount = 0
         self.ColorLists = []
         self.UpOnDown = 0
         self.DownClickCheck = False
@@ -167,6 +168,7 @@ class ColorShopMain:
 
         if(event.type,event.button) == (SDL_MOUSEBUTTONDOWN,SDL_BUTTON_LEFT):
             if self.Coll(550,650,event.x,700-event.y):
+                effsound.play()
                 if Sing_ColorLisManager.ChageColorShopNumber == 0:
                     game_framework.change_state(Menu.Menu)
                 else:
@@ -176,6 +178,8 @@ class ColorShopMain:
             elif self.PopUp == False:
                 for i in range(0, self.Count):
                     if self.ColorLists[i].Coll(event.x , 700-event.y):
+                        effsound.play()
+
                         if self.ColorLists[i].CollCheck() == 1:
                                 self.ColorLists[self.Check].SetBuy()
                                 self.Check = i
@@ -192,6 +196,8 @@ class ColorShopMain:
             else:
                 testcheck = False
                 for i in range(0, 2):
+                    effsound.play()
+
                     if self.Coll(230 + (i * 140),280,event.x,700-event.y):
                         if i == 0:
                             testcheck = self.ColorLists[self.NowNumber].RealBuy()
@@ -201,6 +207,7 @@ class ColorShopMain:
 
         elif (event.type) == SDL_MOUSEBUTTONUP:
             self.DownClickCheck = False
+            self.soundcount= 0
             if self.UpOnDown == 1:
                 self.Len = (self.GetLen(700 - event.y, self.DownmouseYPoint + 5)) + 7
             elif self.UpOnDown == 2:
@@ -209,8 +216,17 @@ class ColorShopMain:
 
         elif (event.type == (SDL_MOUSEMOTION)):
             check = 0
+
             if self.DownClickCheck == True:
+                if self.soundcount == 0:
+                    effsound1.play()
+                self.soundcount += 1
+                if self.soundcount > 30:
+                    self.soundcount = 0
                 if (700 - event.y> self.DownmouseYPoint+5):
+
+
+
                    if self.ColorLists[0].y < self.Count * 105:
                        self.UpOnDown = 1
                        check = 13
@@ -246,9 +262,21 @@ class ColorShopMain:
         if bottom > top1:
             return False
         return True
+
+effsound = None
+effsound1 = None
+
+
 def enter():
     print("컬러샵")
+    global effsound
+    global effsound1
+
     global  ColorManager
+    if effsound == None:
+        effsound = load_wav('res/sound/Button/ButtonDown.wav')
+    if effsound1 == None:
+        effsound1= load_wav('res/sound/Button/ColorShopScroll.wav')
     ColorManager = ColorShopMain()
 
 def exit():

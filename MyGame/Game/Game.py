@@ -7,9 +7,11 @@ from Game.Map.Map import *
 
 def enter():
     print("게임")
+    global effsound
     global GameMapManager
     GameMapManager = Map()
     GameMapManager.MapSetting()
+
 def exit():
     global GameMapManager
     del(GameMapManager)
