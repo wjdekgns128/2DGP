@@ -2,7 +2,137 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ddf0896-c592-4527-ab78-e7d5228dcf63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2012180041_4.txt" afterPath="$PROJECT_DIR$/2012180041_4.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ColorSetUp.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.FLAC.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.freetype.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.jpeg.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.mikmod.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.modplug.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.ogg-vorbis.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.png.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.smpeg.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.tiff.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.webp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.zlib.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2_image.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2_mixer.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2_ttf.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libFLAC-8.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libfreetype-6.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libjpeg-9.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libmikmod-2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libmodplug-1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libogg-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libpng16-16.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libtiff-5.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libvorbis-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libvorbisfile-3.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libwebp-4.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/smpeg2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/zlib1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2_image.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2_mixer.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2_ttf.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libFLAC-8.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libfreetype-6.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libjpeg-9.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libmikmod-2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libmodplug-1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libogg-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libpng16-16.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libtiff-5.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libvorbis-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libvorbisfile-3.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libwebp-4.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/smpeg2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/zlib1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/mygame.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/10x12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/10x12_click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/6x8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/6x8_click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/8x10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/8x10_click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Block_Image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/ColorShop_Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Home.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/ParticleObject.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Play_game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Retry.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/Chapter_Lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/CheckIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/Name_BG.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/StageButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/ch1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/ch2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/look.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Shop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Star_Icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/StartButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/StoreButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Tick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Tick_Click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Title_Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/chclear/claer.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/close_game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/colordata/colorlist.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/fadeobject.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/font/GodoB.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/01.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/02.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/03.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/04.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/05.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/06.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/07.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/08.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/09.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/01.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/02.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/03.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/04.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/05.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/06.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/07.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/08.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/09.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/nobutton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/okbutton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/BGM/BGM.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/BGM/BGM.ogg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/ButtonDown.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/ColorShopScroll.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameBoomTile.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameStageClear.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameStageFail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameTileUp.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/Logo_Effect.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/userdata/chapter/ch1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/userdata/chapter/ch2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/userdata/user.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-PKG.pkg" afterPath="$PROJECT_DIR$/build/mygame/out00-PKG.pkg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/mygame.exe.manifest" afterPath="$PROJECT_DIR$/build/mygame/mygame.exe.manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-EXE.toc" afterPath="$PROJECT_DIR$/build/mygame/out00-EXE.toc" />
     </list>
     <ignored path="MyGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -180,7 +310,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -349,6 +478,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -604,21 +734,21 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24635416" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3255578" sideWeight="0.47395834" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3306288" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255578" sideWeight="0.5239583" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33095723" sideWeight="0.49583334" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3306288" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39553753" sideWeight="0.47760418" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255578" sideWeight="0.5260417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293944" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39553753" sideWeight="0.47760418" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
