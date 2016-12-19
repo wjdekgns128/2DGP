@@ -2,137 +2,147 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ddf0896-c592-4527-ab78-e7d5228dcf63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ColorSetUp.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.FLAC.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.freetype.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.jpeg.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.mikmod.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.modplug.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.ogg-vorbis.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.png.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.smpeg.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.tiff.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.webp.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/LICENSE.zlib.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2_image.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2_mixer.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/SDL2_ttf.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libFLAC-8.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libfreetype-6.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libjpeg-9.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libmikmod-2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libmodplug-1.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libogg-0.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libpng16-16.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libtiff-5.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libvorbis-0.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libvorbisfile-3.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/libwebp-4.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/smpeg2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x64/zlib1.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2_image.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2_mixer.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/SDL2_ttf.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libFLAC-8.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libfreetype-6.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libjpeg-9.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libmikmod-2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libmodplug-1.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libogg-0.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libpng16-16.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libtiff-5.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libvorbis-0.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libvorbisfile-3.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/libwebp-4.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/smpeg2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/DLL/x86/zlib1.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/mygame.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/10x12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/10x12_click.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/6x8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/6x8_click.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/8x10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/8x10_click.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Block_Image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/ColorShop_Logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Home.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/ParticleObject.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Play_game.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Retry.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/Chapter_Lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/CheckIcon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/Name_BG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/StageButton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/ch1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/ch2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Selete/look.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Shop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Star_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/StartButton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/StoreButton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Tick.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Tick_Click.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/Title_Logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/chclear/claer.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/close_game.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/colordata/colorlist.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/fadeobject.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/font/GodoB.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/01.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/02.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/03.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/04.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/05.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/06.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/07.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/08.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/09.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/11.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/12.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/13.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/14.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/15.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch1/16.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/01.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/02.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/03.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/04.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/05.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/06.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/07.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/08.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/09.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/11.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/12.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/13.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/14.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/15.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/mapdata/ch2/16.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/nobutton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/okbutton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/BGM/BGM.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/BGM/BGM.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/ButtonDown.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/ColorShopScroll.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameBoomTile.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameStageClear.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameStageFail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/InGameTileUp.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/sound/Button/Logo_Effect.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/userdata/chapter/ch1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/userdata/chapter/ch2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe_ColorPop/res/userdata/user.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ColorPopSetUP.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.FLAC.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.freetype.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.jpeg.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.mikmod.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.modplug.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.ogg-vorbis.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.png.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.smpeg.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.tiff.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.webp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/LICENSE.zlib.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/SDL2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/SDL2_image.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/SDL2_mixer.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/SDL2_ttf.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libFLAC-8.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libfreetype-6.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libjpeg-9.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libmikmod-2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libmodplug-1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libogg-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libpng16-16.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libtiff-5.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libvorbis-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libvorbisfile-3.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/libwebp-4.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/smpeg2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x64/zlib1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/SDL2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/SDL2_image.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/SDL2_mixer.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/SDL2_ttf.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libFLAC-8.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libfreetype-6.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libjpeg-9.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libmikmod-2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libmodplug-1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libogg-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libpng16-16.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libtiff-5.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libvorbis-0.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libvorbisfile-3.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/libwebp-4.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/smpeg2.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/DLL/x86/zlib1.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/mygame.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/10x12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/10x12_click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/6x8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/6x8_click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/8x10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/8x10_click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Block_Image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/ColorShop_Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Home.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/ParticleObject.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Play_game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Retry.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/Chapter_Lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/CheckIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/Name_BG.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/StageButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/ch1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/ch2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Selete/look.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Shop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Star_Icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/StartButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/StoreButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Tick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Tick_Click.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/Title_Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/chclear/claer.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/close_game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/colordata/colorlist.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/fadeobject.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/font/GodoB.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/01.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/02.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/03.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/04.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/05.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/06.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/07.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/08.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/09.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch1/16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/01.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/02.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/03.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/04.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/05.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/06.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/07.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/08.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/09.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/mapdata/ch2/16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/nobutton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/okbutton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/BGM/BGM.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/BGM/BGM.ogg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/ButtonDown.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/ColorShopScroll.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/InGameBoomTile.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/InGameStageClear.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/InGameStageFail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/InGameTileUp.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/sound/Button/Logo_Effect.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/userdata/chapter/ch1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/userdata/chapter/ch2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPop_Exe/res/userdata/user.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/userdata/chapter/ch1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/userdata/chapter/ch2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/userdata/user.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/base_library.zip" afterPath="$PROJECT_DIR$/build/mygame/base_library.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-PKG.pkg" afterPath="$PROJECT_DIR$/build/mygame/out00-PKG.pkg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-PYZ.pyz" afterPath="$PROJECT_DIR$/build/mygame/out00-PYZ.pyz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Singletons/mysingletons.py" afterPath="$PROJECT_DIR$/Singletons/mysingletons.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/mygame.exe.manifest" afterPath="$PROJECT_DIR$/build/mygame/mygame.exe.manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-Analysis.toc" afterPath="$PROJECT_DIR$/build/mygame/out00-Analysis.toc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-EXE.toc" afterPath="$PROJECT_DIR$/build/mygame/out00-EXE.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-PKG.toc" afterPath="$PROJECT_DIR$/build/mygame/out00-PKG.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/out00-PYZ.toc" afterPath="$PROJECT_DIR$/build/mygame/out00-PYZ.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/mygame/warnmygame.txt" afterPath="$PROJECT_DIR$/build/mygame/warnmygame.txt" />
     </list>
     <ignored path="MyGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,28 +162,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/Game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/Map/Map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4009">
-              <caret line="215" column="49" selection-start-line="215" selection-start-column="49" selection-end-line="215" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mygame.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mygame.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -184,11 +172,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2012180041_4.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2012180041_4.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2012180041_4.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mysingletons.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Singletons/mysingletons.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/os.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mydefine.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mydefine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="claer.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/chclear/claer.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -260,7 +290,6 @@
         <option value="$PROJECT_DIR$/MyUtile/mycoroutine.py" />
         <option value="$PROJECT_DIR$/mydefine.py" />
         <option value="$PROJECT_DIR$/Game/Particle/Particle.py" />
-        <option value="$PROJECT_DIR$/Singletons/mysingletons.py" />
         <option value="$PROJECT_DIR$/res/colordata/colorlist.json" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py" />
         <option value="$PROJECT_DIR$/Logo/Logo.py" />
@@ -275,6 +304,7 @@
         <option value="$PROJECT_DIR$/Game/Map/Map.py" />
         <option value="$PROJECT_DIR$/mygame.py" />
         <option value="$PROJECT_DIR$/2012180041_4.txt" />
+        <option value="$PROJECT_DIR$/Singletons/mysingletons.py" />
       </list>
     </option>
   </component>
@@ -309,7 +339,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,6 +355,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chclear" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,63 +484,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Particle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DLL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ColorShop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -734,12 +746,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24635416" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3306288" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.326572" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255578" sideWeight="0.5239583" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268839" sideWeight="0.51770836" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3306288" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.326572" sideWeight="0.4875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39553753" sideWeight="0.47760418" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -784,13 +796,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -925,13 +930,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mydefine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game_framework.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -957,13 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Singletons/mysingletons.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="162" column="29" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -995,22 +986,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/userdata/chapter/ch1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/userdata/chapter/ch1.txt" />
     <entry file="file://$PROJECT_DIR$/res/userdata/chapter/ch2.txt" />
-    <entry file="file://$PROJECT_DIR$/res/chclear/claer.txt" />
-    <entry file="file://$PROJECT_DIR$/res/userdata/user.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/userdata/user.txt" />
     <entry file="file://$PROJECT_DIR$/Game/Map/Map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4009">
@@ -1027,14 +1005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mygame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1080,6 +1050,48 @@
         <state relative-caret-position="114">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mygame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mydefine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/chclear/claer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Singletons/mysingletons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

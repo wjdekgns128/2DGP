@@ -15,18 +15,18 @@ class UserManager:
         self.NowBuyColor = 1  # 산 컬러수
         self.NowBuyColorList = []  # 현재산 리스트의 번호들
         self.NowBuyColorList.append(0)
-        self.Name = "/res/userdata/user.txt"
+        self.Name =  "res/userdata/user.txt"
     def Load(self):
 
-        z = os.getcwd() + "/res/userdata"
+        z ="res/userdata"
         if not os.path.isdir(z):
             os.makedirs(z)
-        z = os.getcwd() + self.Name
+        z = self.Name
         if not os.path.isfile(z):
             self.Save()
             return;
         self.NowBuyColorList.pop()
-        f = open(os.getcwd() + self.Name, "r")
+        f = open(self.Name, "r")
         str = f.readline()
         str = str.split(' ')
         self.NowMoney = int(str[0])
@@ -37,26 +37,26 @@ class UserManager:
             self.NowBuyColorList.append(int(str1[0]))
         f.close()
     def Save(self):
-        f = open(os.getcwd() + self.Name, "w")
-        f.writelines(str(self.NowMoney) + " "  + str(self.NowColor) + " " + str(self.NowBuyColor) + "\n")
+        f = open( self.Name, "w")
+        f.writelines(str(self.NowMoney) + " " + str(self.NowColor) + " " + str(self.NowBuyColor) + "\n")
         for i in range(0, self.NowBuyColor):
             f.writelines(str(self.NowBuyColorList[i]) + "\n")
 class MapManager():
     def __init__(self):
         self.ClearCh = []
-        self.Dir_List = glob.glob('res/mapdata/*')
+        self.Dir_List = glob.glob(os.getcwd() + '/res/mapdata/*')
         self.File_List = []
         self.ClearNumber = []
         self.NowCh = 0
         self.NowStage = 0
     def LoadCh(self):
         self.ClearCh = []
-        z = os.getcwd() + "/res/chclear"
+        z = "res/chclear"
         if not os.path.isdir(z):
             os.makedirs(z)
-        z5 = os.getcwd() + "/res/chclear/claer.txt"
+        z5 = "res/chclear/claer.txt"
         if not os.path.isfile(z5):
-            f1 = open(os.getcwd() + "/res/chclear/claer.txt", "w")
+            f1 = open("res/chclear/claer.txt", "w")
             for i in range(0, self.Dir_List.__len__()):
                 if i == 0:
                     self.ClearCh.append(1)
@@ -68,7 +68,7 @@ class MapManager():
 
             f1.close()
         else:
-            f1 = open(os.getcwd() + "/res/chclear/claer.txt", "r")
+            f1 = open("res/chclear/claer.txt", "r")
             str = f1.readline()
             st1 = str.split(' ')
             for i in range(0, st1.__len__()-1):
@@ -86,17 +86,17 @@ class MapManager():
             for j in range(0,self.File_List[i].__len__()):
                 Temp.append(0)
             self.ClearNumber.append(Temp)
-        z = os.getcwd() + "/res/userdata/chapter"
+        z =  "res/userdata/chapter"
         if not os.path.isdir(z):
             os.makedirs(z)
         for i in range(0,self.Dir_List.__len__()):
-            z5 = os.getcwd()  + "/res/userdata/chapter/" + "ch" + str(i+1) + ".txt"
+            z5 =  "res/userdata/chapter/" + "ch" + str(i+1) + ".txt"
             if not os.path.isfile(z5):
                 self.Save(i)
             else:
                 self.__LoadChar(i)
     def __LoadChar(self,n): # n의 텍스트파일 읽기
-        f = open(os.getcwd() + "/res/userdata/chapter/" + "ch" + str(n + 1) + ".txt")
+        f = open("res/userdata/chapter/" + "ch" + str(n + 1) + ".txt")
         lines = f.readlines()
         for line in lines:
             t = line.split(' ')
@@ -104,7 +104,7 @@ class MapManager():
                 self.ClearNumber[n][i] = int(t[i])
         f.close()
     def Save(self,n): # 챕터 저장
-        f = open(os.getcwd()  + "/res/userdata/chapter/" + "ch" + str(n+1) + ".txt", "w")
+        f = open( "res/userdata/chapter/" + "ch" + str(n+1) + ".txt", "w")
         for i in range(0, self.File_List[n].__len__()):
             if i == self.File_List[n].__len__()-1:
                 f.writelines(str(self.ClearNumber[n][i]))
@@ -113,7 +113,7 @@ class MapManager():
         f.close()
     def SaveCh(self,n):
         self.ClearCh[n] = 1
-        f1 = open(os.getcwd() + "/res/chclear/claer.txt", "w")
+        f1 = open( "res/chclear/claer.txt", "w")
         for i in range(0, self.Dir_List.__len__()):
             f1.writelines(str(self.ClearCh[i]) + " ")
         f1.close()
