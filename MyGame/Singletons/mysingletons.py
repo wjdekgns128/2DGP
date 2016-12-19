@@ -41,6 +41,7 @@ class UserManager:
         f.writelines(str(self.NowMoney) + " " + str(self.NowColor) + " " + str(self.NowBuyColor) + "\n")
         for i in range(0, self.NowBuyColor):
             f.writelines(str(self.NowBuyColorList[i]) + "\n")
+        f.close()
 class MapManager():
     def __init__(self):
         self.ClearCh = []
